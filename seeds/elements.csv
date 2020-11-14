@@ -1,0 +1,143 @@
+PC11,PC1,Balance on 2 feet
+PC21,PC2,Fall down and get up
+PC31,PC3,Move forward
+PC41,PC4,Move backward
+PC51,PC5,March around on spot
+PC61,PC6,Make snow
+PC71,PC7,Jump on the spot
+PC81,PC8,2-foot twist on the spot
+1B11,1B1,Fall down & get up
+1B21,1B2,Fwd push/glide sequence
+1B31,1B3,Fwd 2-foot glide
+1B41,1B4,Fwd 2-foot sit glide
+1C11,1C1,Snow slide steps Right
+1C12,1C1,Snow slide steps Left
+1C21,1C2,Bwd 2-foot skating/walking
+1C31,1C3,Bwd 2-foot glide
+1A11,1A1,2-foot turn CW
+1A12,1A1,2-foot turn CCW
+1A21,1A2,2-foot jump
+1A31,1A3,Fwd skating perimeter of ice
+2B11,2B1,Fwd 2-foot sculling
+2B21,2B2,Fwd 2-foot to 1-foot glide Right
+2B22,2B2,Fwd 2-foot to 1-foot glide Left
+2B31,2B3,Fwd push/glide sequence
+2B41,2B4,Fwd 1-foot glide with speed Right
+2B42,2B4,Fwd 1-foot glide with speed Left
+2C11,2C1,Fwd stop
+2C21,2C2,Bwd 2-foot sit glide
+2C31,2C3,Bwd 2-foot to 1-foot glide Right
+2C32,2C3,Bwd 2-foot to 1-foot glide Left
+2C41,2C4,Bwd push/glide sequence
+2A11,2A1,Fwd 2-foot turn
+2A21,2A2,Bwd 2-foot turn
+2A31,2A3,Fwd 180 glide turn CW
+2A32,2A3,Fwd 180 glide turn CCW
+2A41,2A4,Fwd 2-foot jump
+3B11,3B1,Fwd stationary blade push Right
+3B12,3B1,Fwd stationary blade push Left
+3B21,3B2,Fwd 2-foot slalom
+3B31,3B3,Fwd circle thrusts CW
+3B32,3B3,Fwd cirlcle thrusts CCW
+3B41,3B4,Walking crosscuts CW
+3B42,3B4,Walking crosscuts CCW
+3B51,3B5,Fwd 2-foot to 1-foot curve glide Right
+3B52,3B5,Fwd 2-foot to 1-foot curve glide Left
+3C11,3C1,Fwd stop with speed Right
+3C12,3C1,Fwd stop with speed Left
+3C13,3C1,Fwd stop with speed Both
+3C21,3C2,Bwd 2-foot sculling
+3C31,3C3,Bwd 2-foot to 1-foot glide Right
+3C32,3C3,Bwd 2-foot to 1-foot glide Left
+3C41,3C4,Bwd push/glide sequence
+3C51,3C5,Bwd 1-foot glide Right
+3C52,3C5,Bwd 1-foot glide Left
+3A11,3A1,Fwd 2-foot quick turn
+3A21,3A2,Bwd 2-foot quick turn
+3A31,3A3,Fwd 360 step turn
+3A41,3A4,Bwd 2-foot jump
+3A51,3A5,Fast fwd perimeter skating CW
+3A52,3A5,Fast fwd perimeter skating CCW
+4B11,4B1,Fwd crosscuts CW
+4B12,4B1,Fwd crosscuts CCW
+4B21,4B2,Fwd inside slalom
+4B31,4B3,Fwd outside slalom
+4B41,4B4,Fwd drag
+4B51,4B5,Fwd spiral
+4B61,4B6,Drop down drill
+4B71,4B7,"Fwd ""V"" start"
+4C11,4C1,Bwd stop
+4C21,4C2,Bwd circle thrusts CW
+4C22,4C2,Bwd circle thrusts CCW
+4C31,4C3,Bwd 2-foot slalom
+4C41,4C4,Bwd 1-foot glide with speed
+4C51,4C5,Fwd 1-foot glide from blue line to blue line
+4C61,4C6,Skate goal line to 1st blue line in under 9sec
+4A11,4A1,Fwd 1-foot turn (small curve) FI
+4A12,4A1,Fwd 1-foot turn (small curve) FO
+4A21,4A2,Bwd 360 step turn
+4A31,4A3,Fwd to bwd 2-foot jump
+4A41,4A4,Bwd to fwd 2-foot jump
+4A51,4A5,2-foot spin
+4A61,4A6,2-foot sit spin
+5B11,5B1,Fwd crosscuts - figure 8
+5B21,5B2,Fwd inside edges
+5B31,5B3,Fwd push/glide sequence
+5B41,5B4,Fwd perimeter stroking with jumps
+5B51,5B5,Inside spread eagle
+5B61,5B6,Fwd 1-foot slalom
+5B71,5B7,Running lateral crossovers
+5C11,5C1,Fwd 2-foot side stop CW
+5C12,5C1,Fwd 2-foot side stop CCW
+5C21,5C2,Bwd stop with speed Right
+5C22,5C2,Bwd stop with speed Left
+5C23,5C2,Bwd stop with speed Both
+5C31,5C3,Bwd crosscuts CW
+5C32,5C3,Bwd crosscuts CCW
+5C41,5C4,Bwd inside slalom
+5C51,5C5,Bwd push/glide sequence
+5C61,5C6,Bwd spiral
+5C71,5C7,Skate goal line to 2nd blue line in 12 seconds or less
+5A11,5A1,Fwd 1-foot turn (large curve) LFI
+5A12,5A1,Fwd 1-foot turn (large curve) LFO
+5A13,5A1,Fwd 1-foot turn (large curve) RFI
+5A14,5A1,Fwd 1-foot turn (large curve) RFO
+5A21,5A2,Fwd 360 glide turn CW
+5A22,5A2,Fwd 360 glide turn CCW
+5A31,5A3,Fwd to bwd 1-foot jump FI
+5A32,5A3,Fwd to bwd 1-foot jump F0
+5A41,5A4,Fwd power jump
+5A51,5A5,1-foot spin
+5A61,5A6,Alternating foot spin
+5A71,5A7,Fwd tight glide turns
+6B11,6B1,Fwd power crosscuts CW
+6B12,6B1,Fwd power crosscuts CCW
+6B21,6B2,Fwd perimeter skating with crosscuts CW
+6B22,6B2,Fwd perimeter skating with crosscuts CCW
+6B31,6B3,Fwd outside edges
+6B41,6B4,Fwd 1-foot slalom
+6B51,6B5,Fwd shoot the duck
+6B61,6B6,Fwd perimeter skating with side stops
+6B71,6B7,Fwd spiral on a curve
+6B81,6B8,Fwd crossover acceleration
+6C11,6C1,Fwd 1-foot side stop
+6C21,6C2,Fwd 2-foot side stop with speed CW
+6C22,6C2,Fwd 2-foot side stop with speed CCW
+6C31,6C3,Bwd outside slalom
+6C41,6C4,Bwd crosscuts - figure 8
+6C51,6C5,Bwd perimeter skating with crosscuts CW
+6C52,6C5,Bwd perimeter skating with crosscuts CCW
+6C61,6C6,Bwd 1-foot slalom
+6C71,6C7,Bwd 1-foot spid
+6C81,6C8,Skate perimeter of ice in under 35sec
+6A11,6A1,Fwd 180 C-step Right
+6A12,6A1,Fwd 180 C-step Left
+6A21,6A2,Bwd 180 C-step Right
+6A22,6A2,Bwd 180 C-step Left
+6A31,6A3,2-foot multi-turns
+6A41,6A4,Rotating power jump
+6A51,6A5,Bwd toe-assisted jump
+6A61,6A6,Bwd 360 2-foot jump
+6A71,6A7,Fwd 1-foot spin with spiraling edge
+6A81,6A8,Fwd 2-foot reverse pivot turn CW
+6A82,6A8,Fwd 2-foot reverse pivot turn CCW
