@@ -1,25 +1,24 @@
-const RibbonServices = require("../element/ribbon-services");
-
 const RibbonLogServices = {
-  async insertlog(knex, log) {
-    const rows = await knex.insert(log).into("canskate_ribbon_log");
+  getLogs(knex) {
+    return knex.select("*").from("canskate_ribbon_log");
+  },
+  async insertLog(knex, log) {
+    const rows = await knex
+      .insert(log)
+      .into("canskate_ribbon_log")
+      .returning("*");
     return rows[0];
   },
-  async verifyCheckmarks(knex, log) {
-    const { ribbon_id, skater_id, date_completed } = log;
-    const ribbon_log = { ribbon_id, skater_id, date_completed };
-    const { checkmarks_required } = await RibbonServices.getRibbonById(
-      knex,
-      ribbon_id
-    );
-    const { count: checkmarksCompleted } = await knex("canskate_checkmark_log")
+  async countCompletedRibbonsByBadge(knex, skater_id, badge_id) {
+    const { count } = await knex("canskate_ribbon_log")
       .count()
       .where({ skater_id })
-      .where("checkmark_id", "LIKE", `${ribbon_id}%`)
+      .where("ribbon_id", "LIKE", `${badge_id}%`)
       .first();
-
-    if (checkmarks_required == checkmarksCompleted)
-      await RibbonLogServices.insertlog(knex,ribbon_log);
+    return parseInt(count);
+  },
+  deleteLog(knex, id) {
+    return knex("canskate_ribbon_log").where({ id }).delete();
   },
 };
 

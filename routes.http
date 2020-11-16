@@ -46,8 +46,8 @@ POST http://localhost:8000/api/log HTTP/1.1
 content-type: application/json
 
 {
-  "skater_id": 3,
-  "element_id": "1B41",
+  "skater_id": 50,
+  "element_id": "1A31",
   "date_completed": "2020-05-16"
 }
 

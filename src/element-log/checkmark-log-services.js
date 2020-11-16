@@ -1,25 +1,25 @@
-const CheckmarkServices = require('../element/checkmark-services')
-
 const CheckmarkLogServices = {
-  getLogs() {},
-  getLogById() {},
-  async verifyElements(knex, log) {
-    // verify canskate_checkmarks.total_elements
-    const {checkmark_id, skater_id, date_completed} = log;
-    const checkmark_log = {skater_id, checkmark_id, date_completed}
-    const {total_elements} = await CheckmarkServices.getCheckmarkById(knex,checkmark_id);
-    const {count: completedInCheckmark} = await knex('canskate_element_log')
-    .count()
-    .where({skater_id})
-    .where('element_id', 'LIKE', `${checkmark_id}%`)
-    .first();
-    if (total_elements == completedInCheckmark) await CheckmarkLogServices.insertLog(knex, checkmark_log);
+  getLogs(knex) {
+    return knex.select("*").from("canskate_checkmark_log");
+  },
+  async countCompletedCheckmarksByRibbon(knex, skater_id, ribbon_id) {
+    const {count} = await knex("canskate_checkmark_log")
+      .count()
+      .where({ skater_id })
+      .where("checkmark_id", "LIKE", `${ribbon_id}%`)
+      .first();
+      return parseInt(count)
   },
   async insertLog(knex, log) {
-    const rows = await knex.insert(log).into('canskate_checkmark_log').returning('*');
+    const rows = await knex
+      .insert(log)
+      .into("canskate_checkmark_log")
+      .returning("*");
     return rows[0];
   },
-  deleteLog() {},
+  deleteLog(knex, id) {
+    return knex("canskate_checkmark_log").where({ id }).delete();
+  },
 };
 
 module.exports = CheckmarkLogServices;
