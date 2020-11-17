@@ -1,0 +1,1315 @@
+{
+  "elements": [
+    {
+      "element": "Fall down & get up",
+      "element_id": "1B11",
+      "checkmark_id": "1B1",
+      "ribbon_id": "1B",
+      "fundamental": "Balance",
+      "badge": 1
+    },
+    {
+      "element": "Fwd push/glide sequence",
+      "element_id": "1B21",
+      "checkmark_id": "1B2",
+      "ribbon_id": "1B",
+      "fundamental": "Balance",
+      "badge": 1
+    },
+    {
+      "element": "Fwd 2-foot glide",
+      "element_id": "1B31",
+      "checkmark_id": "1B3",
+      "ribbon_id": "1B",
+      "fundamental": "Balance",
+      "badge": 1
+    },
+    {
+      "element": "Fwd 2-foot sit glide",
+      "element_id": "1B41",
+      "checkmark_id": "1B4",
+      "ribbon_id": "1B",
+      "fundamental": "Balance",
+      "badge": 1
+    },
+    {
+      "element": "Snow slide steps Right",
+      "element_id": "1C11",
+      "checkmark_id": "1C1",
+      "ribbon_id": "1C",
+      "fundamental": "Control",
+      "badge": 1
+    },
+    {
+      "element": "Snow slide steps Left",
+      "element_id": "1C12",
+      "checkmark_id": "1C1",
+      "ribbon_id": "1C",
+      "fundamental": "Control",
+      "badge": 1
+    },
+    {
+      "element": "Bwd 2-foot skating/walking",
+      "element_id": "1C21",
+      "checkmark_id": "1C2",
+      "ribbon_id": "1C",
+      "fundamental": "Control",
+      "badge": 1
+    },
+    {
+      "element": "Bwd 2-foot glide",
+      "element_id": "1C31",
+      "checkmark_id": "1C3",
+      "ribbon_id": "1C",
+      "fundamental": "Control",
+      "badge": 1
+    },
+    {
+      "element": "2-foot turn CW",
+      "element_id": "1A11",
+      "checkmark_id": "1A1",
+      "ribbon_id": "1A",
+      "fundamental": "Agility",
+      "badge": 1
+    },
+    {
+      "element": "2-foot turn CCW",
+      "element_id": "1A12",
+      "checkmark_id": "1A1",
+      "ribbon_id": "1A",
+      "fundamental": "Agility",
+      "badge": 1
+    },
+    {
+      "element": "2-foot jump",
+      "element_id": "1A21",
+      "checkmark_id": "1A2",
+      "ribbon_id": "1A",
+      "fundamental": "Agility",
+      "badge": 1
+    },
+    {
+      "element": "Fwd skating perimeter of ice",
+      "element_id": "1A31",
+      "checkmark_id": "1A3",
+      "ribbon_id": "1A",
+      "fundamental": "Agility",
+      "badge": 1
+    },
+    {
+      "element": "Fwd 2-foot sculling",
+      "element_id": "2B11",
+      "checkmark_id": "2B1",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 2-foot to 1-foot glide Right",
+      "element_id": "2B21",
+      "checkmark_id": "2B2",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 2-foot to 1-foot glide Left",
+      "element_id": "2B22",
+      "checkmark_id": "2B2",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd push/glide sequence",
+      "element_id": "2B31",
+      "checkmark_id": "2B3",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 1-foot glide with speed Right",
+      "element_id": "2B41",
+      "checkmark_id": "2B4",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 1-foot glide with speed Left",
+      "element_id": "2B42",
+      "checkmark_id": "2B4",
+      "ribbon_id": "2B",
+      "fundamental": "Balance",
+      "badge": 2
+    },
+    {
+      "element": "Fwd stop",
+      "element_id": "2C11",
+      "checkmark_id": "2C1",
+      "ribbon_id": "2C",
+      "fundamental": "Control",
+      "badge": 2
+    },
+    {
+      "element": "Bwd 2-foot sit glide",
+      "element_id": "2C21",
+      "checkmark_id": "2C2",
+      "ribbon_id": "2C",
+      "fundamental": "Control",
+      "badge": 2
+    },
+    {
+      "element": "Bwd 2-foot to 1-foot glide Right",
+      "element_id": "2C31",
+      "checkmark_id": "2C3",
+      "ribbon_id": "2C",
+      "fundamental": "Control",
+      "badge": 2
+    },
+    {
+      "element": "Bwd 2-foot to 1-foot glide Left",
+      "element_id": "2C32",
+      "checkmark_id": "2C3",
+      "ribbon_id": "2C",
+      "fundamental": "Control",
+      "badge": 2
+    },
+    {
+      "element": "Bwd push/glide sequence",
+      "element_id": "2C41",
+      "checkmark_id": "2C4",
+      "ribbon_id": "2C",
+      "fundamental": "Control",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 2-foot turn",
+      "element_id": "2A11",
+      "checkmark_id": "2A1",
+      "ribbon_id": "2A",
+      "fundamental": "Agility",
+      "badge": 2
+    },
+    {
+      "element": "Bwd 2-foot turn",
+      "element_id": "2A21",
+      "checkmark_id": "2A2",
+      "ribbon_id": "2A",
+      "fundamental": "Agility",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 180 glide turn CW",
+      "element_id": "2A31",
+      "checkmark_id": "2A3",
+      "ribbon_id": "2A",
+      "fundamental": "Agility",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 180 glide turn CCW",
+      "element_id": "2A32",
+      "checkmark_id": "2A3",
+      "ribbon_id": "2A",
+      "fundamental": "Agility",
+      "badge": 2
+    },
+    {
+      "element": "Fwd 2-foot jump",
+      "element_id": "2A41",
+      "checkmark_id": "2A4",
+      "ribbon_id": "2A",
+      "fundamental": "Agility",
+      "badge": 2
+    },
+    {
+      "element": "Fwd stationary blade push Right",
+      "element_id": "3B11",
+      "checkmark_id": "3B1",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd stationary blade push Left",
+      "element_id": "3B12",
+      "checkmark_id": "3B1",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd 2-foot slalom",
+      "element_id": "3B21",
+      "checkmark_id": "3B2",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd circle thrusts CW",
+      "element_id": "3B31",
+      "checkmark_id": "3B3",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd cirlcle thrusts CCW",
+      "element_id": "3B32",
+      "checkmark_id": "3B3",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Walking crosscuts CW",
+      "element_id": "3B41",
+      "checkmark_id": "3B4",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Walking crosscuts CCW",
+      "element_id": "3B42",
+      "checkmark_id": "3B4",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd 2-foot to 1-foot curve glide Right",
+      "element_id": "3B51",
+      "checkmark_id": "3B5",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd 2-foot to 1-foot curve glide Left",
+      "element_id": "3B52",
+      "checkmark_id": "3B5",
+      "ribbon_id": "3B",
+      "fundamental": "Balance",
+      "badge": 3
+    },
+    {
+      "element": "Fwd stop with speed Right",
+      "element_id": "3C11",
+      "checkmark_id": "3C1",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Fwd stop with speed Left",
+      "element_id": "3C12",
+      "checkmark_id": "3C1",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Fwd stop with speed Both",
+      "element_id": "3C13",
+      "checkmark_id": "3C1",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 2-foot sculling",
+      "element_id": "3C21",
+      "checkmark_id": "3C2",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 2-foot to 1-foot glide Right",
+      "element_id": "3C31",
+      "checkmark_id": "3C3",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 2-foot to 1-foot glide Left",
+      "element_id": "3C32",
+      "checkmark_id": "3C3",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd push/glide sequence",
+      "element_id": "3C41",
+      "checkmark_id": "3C4",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 1-foot glide Right",
+      "element_id": "3C51",
+      "checkmark_id": "3C5",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 1-foot glide Left",
+      "element_id": "3C52",
+      "checkmark_id": "3C5",
+      "ribbon_id": "3C",
+      "fundamental": "Control",
+      "badge": 3
+    },
+    {
+      "element": "Fwd 2-foot quick turn",
+      "element_id": "3A11",
+      "checkmark_id": "3A1",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 2-foot quick turn",
+      "element_id": "3A21",
+      "checkmark_id": "3A2",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Fwd 360 step turn",
+      "element_id": "3A31",
+      "checkmark_id": "3A3",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Bwd 2-foot jump",
+      "element_id": "3A41",
+      "checkmark_id": "3A4",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Fast fwd perimeter skating CW",
+      "element_id": "3A51",
+      "checkmark_id": "3A5",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Fast fwd perimeter skating CCW",
+      "element_id": "3A52",
+      "checkmark_id": "3A5",
+      "ribbon_id": "3A",
+      "fundamental": "Agility",
+      "badge": 3
+    },
+    {
+      "element": "Fwd crosscuts CW",
+      "element_id": "4B11",
+      "checkmark_id": "4B1",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd crosscuts CCW",
+      "element_id": "4B12",
+      "checkmark_id": "4B1",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd inside slalom",
+      "element_id": "4B21",
+      "checkmark_id": "4B2",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd outside slalom",
+      "element_id": "4B31",
+      "checkmark_id": "4B3",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd drag",
+      "element_id": "4B41",
+      "checkmark_id": "4B4",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd spiral",
+      "element_id": "4B51",
+      "checkmark_id": "4B5",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Drop down drill",
+      "element_id": "4B61",
+      "checkmark_id": "4B6",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Fwd \"V\" start",
+      "element_id": "4B71",
+      "checkmark_id": "4B7",
+      "ribbon_id": "4B",
+      "fundamental": "Balance",
+      "badge": 4
+    },
+    {
+      "element": "Bwd stop",
+      "element_id": "4C11",
+      "checkmark_id": "4C1",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Bwd circle thrusts CW",
+      "element_id": "4C21",
+      "checkmark_id": "4C2",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Bwd circle thrusts CCW",
+      "element_id": "4C22",
+      "checkmark_id": "4C2",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Bwd 2-foot slalom",
+      "element_id": "4C31",
+      "checkmark_id": "4C3",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Bwd 1-foot glide with speed",
+      "element_id": "4C41",
+      "checkmark_id": "4C4",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Fwd 1-foot glide from blue line to blue line",
+      "element_id": "4C51",
+      "checkmark_id": "4C5",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Skate goal line to 1st blue line in under 9sec",
+      "element_id": "4C61",
+      "checkmark_id": "4C6",
+      "ribbon_id": "4C",
+      "fundamental": "Control",
+      "badge": 4
+    },
+    {
+      "element": "Fwd 1-foot turn (small curve) FI",
+      "element_id": "4A11",
+      "checkmark_id": "4A1",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "Fwd 1-foot turn (small curve) FO",
+      "element_id": "4A12",
+      "checkmark_id": "4A1",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "Bwd 360 step turn",
+      "element_id": "4A21",
+      "checkmark_id": "4A2",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "Fwd to bwd 2-foot jump",
+      "element_id": "4A31",
+      "checkmark_id": "4A3",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "Bwd to fwd 2-foot jump",
+      "element_id": "4A41",
+      "checkmark_id": "4A4",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "2-foot spin",
+      "element_id": "4A51",
+      "checkmark_id": "4A5",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "2-foot sit spin",
+      "element_id": "4A61",
+      "checkmark_id": "4A6",
+      "ribbon_id": "4A",
+      "fundamental": "Agility",
+      "badge": 4
+    },
+    {
+      "element": "Fwd crosscuts - figure 8",
+      "element_id": "5B11",
+      "checkmark_id": "5B1",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Fwd inside edges",
+      "element_id": "5B21",
+      "checkmark_id": "5B2",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Fwd push/glide sequence",
+      "element_id": "5B31",
+      "checkmark_id": "5B3",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Fwd perimeter stroking with jumps",
+      "element_id": "5B41",
+      "checkmark_id": "5B4",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Inside spread eagle",
+      "element_id": "5B51",
+      "checkmark_id": "5B5",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 1-foot slalom",
+      "element_id": "5B61",
+      "checkmark_id": "5B6",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Running lateral crossovers",
+      "element_id": "5B71",
+      "checkmark_id": "5B7",
+      "ribbon_id": "5B",
+      "fundamental": "Balance",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 2-foot side stop CW",
+      "element_id": "5C11",
+      "checkmark_id": "5C1",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 2-foot side stop CCW",
+      "element_id": "5C12",
+      "checkmark_id": "5C1",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd stop with speed Right",
+      "element_id": "5C21",
+      "checkmark_id": "5C2",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd stop with speed Left",
+      "element_id": "5C22",
+      "checkmark_id": "5C2",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd stop with speed Both",
+      "element_id": "5C23",
+      "checkmark_id": "5C2",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd crosscuts CW",
+      "element_id": "5C31",
+      "checkmark_id": "5C3",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd crosscuts CCW",
+      "element_id": "5C32",
+      "checkmark_id": "5C3",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd inside slalom",
+      "element_id": "5C41",
+      "checkmark_id": "5C4",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd push/glide sequence",
+      "element_id": "5C51",
+      "checkmark_id": "5C5",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Bwd spiral",
+      "element_id": "5C61",
+      "checkmark_id": "5C6",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Skate goal line to 2nd blue line in 12 seconds or less",
+      "element_id": "5C71",
+      "checkmark_id": "5C7",
+      "ribbon_id": "5C",
+      "fundamental": "Control",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 1-foot turn (large curve) LFI",
+      "element_id": "5A11",
+      "checkmark_id": "5A1",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 1-foot turn (large curve) LFO",
+      "element_id": "5A12",
+      "checkmark_id": "5A1",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 1-foot turn (large curve) RFI",
+      "element_id": "5A13",
+      "checkmark_id": "5A1",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 1-foot turn (large curve) RFO",
+      "element_id": "5A14",
+      "checkmark_id": "5A1",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 360 glide turn CW",
+      "element_id": "5A21",
+      "checkmark_id": "5A2",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd 360 glide turn CCW",
+      "element_id": "5A22",
+      "checkmark_id": "5A2",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd to bwd 1-foot jump FI",
+      "element_id": "5A31",
+      "checkmark_id": "5A3",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd to bwd 1-foot jump F0",
+      "element_id": "5A32",
+      "checkmark_id": "5A3",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd power jump",
+      "element_id": "5A41",
+      "checkmark_id": "5A4",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "1-foot spin",
+      "element_id": "5A51",
+      "checkmark_id": "5A5",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Alternating foot spin",
+      "element_id": "5A61",
+      "checkmark_id": "5A6",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd tight glide turns",
+      "element_id": "5A71",
+      "checkmark_id": "5A7",
+      "ribbon_id": "5A",
+      "fundamental": "Agility",
+      "badge": 5
+    },
+    {
+      "element": "Fwd power crosscuts CW",
+      "element_id": "6B11",
+      "checkmark_id": "6B1",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd power crosscuts CCW",
+      "element_id": "6B12",
+      "checkmark_id": "6B1",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd perimeter skating with crosscuts CW",
+      "element_id": "6B21",
+      "checkmark_id": "6B2",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd perimeter skating with crosscuts CCW",
+      "element_id": "6B22",
+      "checkmark_id": "6B2",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd outside edges",
+      "element_id": "6B31",
+      "checkmark_id": "6B3",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 1-foot slalom",
+      "element_id": "6B41",
+      "checkmark_id": "6B4",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd shoot the duck",
+      "element_id": "6B51",
+      "checkmark_id": "6B5",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd perimeter skating with side stops",
+      "element_id": "6B61",
+      "checkmark_id": "6B6",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd spiral on a curve",
+      "element_id": "6B71",
+      "checkmark_id": "6B7",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd crossover acceleration",
+      "element_id": "6B81",
+      "checkmark_id": "6B8",
+      "ribbon_id": "6B",
+      "fundamental": "Balance",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 1-foot side stop",
+      "element_id": "6C11",
+      "checkmark_id": "6C1",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 2-foot side stop with speed CW",
+      "element_id": "6C21",
+      "checkmark_id": "6C2",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 2-foot side stop with speed CCW",
+      "element_id": "6C22",
+      "checkmark_id": "6C2",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd outside slalom",
+      "element_id": "6C31",
+      "checkmark_id": "6C3",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd crosscuts - figure 8",
+      "element_id": "6C41",
+      "checkmark_id": "6C4",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd perimeter skating with crosscuts CW",
+      "element_id": "6C51",
+      "checkmark_id": "6C5",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd perimeter skating with crosscuts CCW",
+      "element_id": "6C52",
+      "checkmark_id": "6C5",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd 1-foot slalom",
+      "element_id": "6C61",
+      "checkmark_id": "6C6",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Bwd 1-foot spid",
+      "element_id": "6C71",
+      "checkmark_id": "6C7",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Skate perimeter of ice in under 35sec",
+      "element_id": "6C81",
+      "checkmark_id": "6C8",
+      "ribbon_id": "6C",
+      "fundamental": "Control",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 180 C-step Right",
+      "element_id": "6A11",
+      "checkmark_id": "6A1",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 180 C-step Left",
+      "element_id": "6A12",
+      "checkmark_id": "6A1",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Bwd 180 C-step Right",
+      "element_id": "6A21",
+      "checkmark_id": "6A2",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Bwd 180 C-step Left",
+      "element_id": "6A22",
+      "checkmark_id": "6A2",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "2-foot multi-turns",
+      "element_id": "6A31",
+      "checkmark_id": "6A3",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Rotating power jump",
+      "element_id": "6A41",
+      "checkmark_id": "6A4",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Bwd toe-assisted jump",
+      "element_id": "6A51",
+      "checkmark_id": "6A5",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Bwd 360 2-foot jump",
+      "element_id": "6A61",
+      "checkmark_id": "6A6",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 1-foot spin with spiraling edge",
+      "element_id": "6A71",
+      "checkmark_id": "6A7",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 2-foot reverse pivot turn CW",
+      "element_id": "6A81",
+      "checkmark_id": "6A8",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    },
+    {
+      "element": "Fwd 2-foot reverse pivot turn CCW",
+      "element_id": "6A82",
+      "checkmark_id": "6A8",
+      "ribbon_id": "6A",
+      "fundamental": "Agility",
+      "badge": 6
+    }
+  ],
+  "checkmarks": [
+    { "checkmark_id": "1B1", "ribbon_id": "1B", "total_elements": 1 },
+    { "checkmark_id": "1B2", "ribbon_id": "1B", "total_elements": 1 },
+    { "checkmark_id": "1B3", "ribbon_id": "1B", "total_elements": 1 },
+    { "checkmark_id": "1B4", "ribbon_id": "1B", "total_elements": 1 },
+    { "checkmark_id": "1C1", "ribbon_id": "1C", "total_elements": 2 },
+    { "checkmark_id": "1C2", "ribbon_id": "1C", "total_elements": 1 },
+    { "checkmark_id": "1C3", "ribbon_id": "1C", "total_elements": 1 },
+    { "checkmark_id": "1A1", "ribbon_id": "1A", "total_elements": 2 },
+    { "checkmark_id": "1A2", "ribbon_id": "1A", "total_elements": 1 },
+    { "checkmark_id": "1A3", "ribbon_id": "1A", "total_elements": 1 },
+    { "checkmark_id": "2B1", "ribbon_id": "2B", "total_elements": 1 },
+    { "checkmark_id": "2B2", "ribbon_id": "2B", "total_elements": 2 },
+    { "checkmark_id": "2B3", "ribbon_id": "2B", "total_elements": 1 },
+    { "checkmark_id": "2B4", "ribbon_id": "2B", "total_elements": 2 },
+    { "checkmark_id": "2C1", "ribbon_id": "2C", "total_elements": 1 },
+    { "checkmark_id": "2C2", "ribbon_id": "2C", "total_elements": 1 },
+    { "checkmark_id": "2C3", "ribbon_id": "2C", "total_elements": 2 },
+    { "checkmark_id": "2C4", "ribbon_id": "2C", "total_elements": 1 },
+    { "checkmark_id": "2A1", "ribbon_id": "2A", "total_elements": 1 },
+    { "checkmark_id": "2A2", "ribbon_id": "2A", "total_elements": 1 },
+    { "checkmark_id": "2A3", "ribbon_id": "2A", "total_elements": 2 },
+    { "checkmark_id": "2A4", "ribbon_id": "2A", "total_elements": 1 },
+    { "checkmark_id": "3B1", "ribbon_id": "3B", "total_elements": 2 },
+    { "checkmark_id": "3B2", "ribbon_id": "3B", "total_elements": 1 },
+    { "checkmark_id": "3B3", "ribbon_id": "3B", "total_elements": 2 },
+    { "checkmark_id": "3B4", "ribbon_id": "3B", "total_elements": 2 },
+    { "checkmark_id": "3B5", "ribbon_id": "3B", "total_elements": 2 },
+    { "checkmark_id": "3C1", "ribbon_id": "3C", "total_elements": 3 },
+    { "checkmark_id": "3C2", "ribbon_id": "3C", "total_elements": 1 },
+    { "checkmark_id": "3C3", "ribbon_id": "3C", "total_elements": 2 },
+    { "checkmark_id": "3C4", "ribbon_id": "3C", "total_elements": 1 },
+    { "checkmark_id": "3C5", "ribbon_id": "3C", "total_elements": 2 },
+    { "checkmark_id": "3A1", "ribbon_id": "3A", "total_elements": 1 },
+    { "checkmark_id": "3A2", "ribbon_id": "3A", "total_elements": 1 },
+    { "checkmark_id": "3A3", "ribbon_id": "3A", "total_elements": 1 },
+    { "checkmark_id": "3A4", "ribbon_id": "3A", "total_elements": 1 },
+    { "checkmark_id": "3A5", "ribbon_id": "3A", "total_elements": 2 },
+    { "checkmark_id": "4B1", "ribbon_id": "4B", "total_elements": 2 },
+    { "checkmark_id": "4B2", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4B3", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4B4", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4B5", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4B6", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4B7", "ribbon_id": "4B", "total_elements": 1 },
+    { "checkmark_id": "4C1", "ribbon_id": "4C", "total_elements": 1 },
+    { "checkmark_id": "4C2", "ribbon_id": "4C", "total_elements": 2 },
+    { "checkmark_id": "4C3", "ribbon_id": "4C", "total_elements": 1 },
+    { "checkmark_id": "4C4", "ribbon_id": "4C", "total_elements": 1 },
+    { "checkmark_id": "4C5", "ribbon_id": "4C", "total_elements": 1 },
+    { "checkmark_id": "4C6", "ribbon_id": "4C", "total_elements": 1 },
+    { "checkmark_id": "4A1", "ribbon_id": "4A", "total_elements": 2 },
+    { "checkmark_id": "4A2", "ribbon_id": "4A", "total_elements": 1 },
+    { "checkmark_id": "4A3", "ribbon_id": "4A", "total_elements": 1 },
+    { "checkmark_id": "4A4", "ribbon_id": "4A", "total_elements": 1 },
+    { "checkmark_id": "4A5", "ribbon_id": "4A", "total_elements": 1 },
+    { "checkmark_id": "4A6", "ribbon_id": "4A", "total_elements": 1 },
+    { "checkmark_id": "5B1", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B2", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B3", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B4", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B5", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B6", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5B7", "ribbon_id": "5B", "total_elements": 1 },
+    { "checkmark_id": "5C1", "ribbon_id": "5C", "total_elements": 2 },
+    { "checkmark_id": "5C2", "ribbon_id": "5C", "total_elements": 3 },
+    { "checkmark_id": "5C3", "ribbon_id": "5C", "total_elements": 2 },
+    { "checkmark_id": "5C4", "ribbon_id": "5C", "total_elements": 1 },
+    { "checkmark_id": "5C5", "ribbon_id": "5C", "total_elements": 1 },
+    { "checkmark_id": "5C6", "ribbon_id": "5C", "total_elements": 1 },
+    { "checkmark_id": "5C7", "ribbon_id": "5C", "total_elements": 1 },
+    { "checkmark_id": "5A1", "ribbon_id": "5A", "total_elements": 4 },
+    { "checkmark_id": "5A2", "ribbon_id": "5A", "total_elements": 2 },
+    { "checkmark_id": "5A3", "ribbon_id": "5A", "total_elements": 2 },
+    { "checkmark_id": "5A4", "ribbon_id": "5A", "total_elements": 1 },
+    { "checkmark_id": "5A5", "ribbon_id": "5A", "total_elements": 1 },
+    { "checkmark_id": "5A6", "ribbon_id": "5A", "total_elements": 1 },
+    { "checkmark_id": "5A7", "ribbon_id": "5A", "total_elements": 1 },
+    { "checkmark_id": "6B1", "ribbon_id": "6B", "total_elements": 2 },
+    { "checkmark_id": "6B2", "ribbon_id": "6B", "total_elements": 2 },
+    { "checkmark_id": "6B3", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6B4", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6B5", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6B6", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6B7", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6B8", "ribbon_id": "6B", "total_elements": 1 },
+    { "checkmark_id": "6C1", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6C2", "ribbon_id": "6C", "total_elements": 2 },
+    { "checkmark_id": "6C3", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6C4", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6C5", "ribbon_id": "6C", "total_elements": 2 },
+    { "checkmark_id": "6C6", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6C7", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6C8", "ribbon_id": "6C", "total_elements": 1 },
+    { "checkmark_id": "6A1", "ribbon_id": "6A", "total_elements": 2 },
+    { "checkmark_id": "6A2", "ribbon_id": "6A", "total_elements": 2 },
+    { "checkmark_id": "6A3", "ribbon_id": "6A", "total_elements": 1 },
+    { "checkmark_id": "6A4", "ribbon_id": "6A", "total_elements": 1 },
+    { "checkmark_id": "6A5", "ribbon_id": "6A", "total_elements": 1 },
+    { "checkmark_id": "6A6", "ribbon_id": "6A", "total_elements": 1 },
+    { "checkmark_id": "6A7", "ribbon_id": "6A", "total_elements": 1 },
+    { "checkmark_id": "6A8", "ribbon_id": "6A", "total_elements": 2 }
+  ],
+  "ribbons": [
+    {
+      "id": "1B",
+      "fundamental_area": "Balance",
+      "stage": 1,
+      "checkmarks_required": 4,
+      "total_checkmarks": 4
+    },
+    {
+      "id": "2B",
+      "fundamental_area": "Balance",
+      "stage": 2,
+      "checkmarks_required": 4,
+      "total_checkmarks": 4
+    },
+    {
+      "id": "3B",
+      "fundamental_area": "Balance",
+      "stage": 3,
+      "checkmarks_required": 5,
+      "total_checkmarks": 5
+    },
+    {
+      "id": "4B",
+      "fundamental_area": "Balance",
+      "stage": 4,
+      "checkmarks_required": 5,
+      "total_checkmarks": 7
+    },
+    {
+      "id": "5B",
+      "fundamental_area": "Balance",
+      "stage": 5,
+      "checkmarks_required": 5,
+      "total_checkmarks": 7
+    },
+    {
+      "id": "6B",
+      "fundamental_area": "Balance",
+      "stage": 6,
+      "checkmarks_required": 6,
+      "total_checkmarks": 8
+    },
+    {
+      "id": "1C",
+      "fundamental_area": "Control",
+      "stage": 1,
+      "checkmarks_required": 3,
+      "total_checkmarks": 3
+    },
+    {
+      "id": "2C",
+      "fundamental_area": "Control",
+      "stage": 2,
+      "checkmarks_required": 3,
+      "total_checkmarks": 4
+    },
+    {
+      "id": "3C",
+      "fundamental_area": "Control",
+      "stage": 3,
+      "checkmarks_required": 5,
+      "total_checkmarks": 5
+    },
+    {
+      "id": "4C",
+      "fundamental_area": "Control",
+      "stage": 4,
+      "checkmarks_required": 5,
+      "total_checkmarks": 6
+    },
+    {
+      "id": "5C",
+      "fundamental_area": "Control",
+      "stage": 5,
+      "checkmarks_required": 6,
+      "total_checkmarks": 7
+    },
+    {
+      "id": "6C",
+      "fundamental_area": "Control",
+      "stage": 6,
+      "checkmarks_required": 6,
+      "total_checkmarks": 8
+    },
+    {
+      "id": "1A",
+      "fundamental_area": "Agility",
+      "stage": 1,
+      "checkmarks_required": 3,
+      "total_checkmarks": 3
+    },
+    {
+      "id": "2A",
+      "fundamental_area": "Agility",
+      "stage": 2,
+      "checkmarks_required": 4,
+      "total_checkmarks": 4
+    },
+    {
+      "id": "3A",
+      "fundamental_area": "Agility",
+      "stage": 3,
+      "checkmarks_required": 5,
+      "total_checkmarks": 5
+    },
+    {
+      "id": "4A",
+      "fundamental_area": "Agility",
+      "stage": 4,
+      "checkmarks_required": 5,
+      "total_checkmarks": 6
+    },
+    {
+      "id": "5A",
+      "fundamental_area": "Agility",
+      "stage": 5,
+      "checkmarks_required": 6,
+      "total_checkmarks": 7
+    },
+    {
+      "id": "6A",
+      "fundamental_area": "Agility",
+      "stage": 6,
+      "checkmarks_required": 6,
+      "total_checkmarks": 8
+    }
+  ]
+}

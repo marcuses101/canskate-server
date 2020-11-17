@@ -1,5 +1,3 @@
-
-
 const ElementServices = {
   getElements(knex) {
     return knex("canskate_elements")

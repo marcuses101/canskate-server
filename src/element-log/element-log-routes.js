@@ -130,6 +130,9 @@ ElementLogRouter.route("/:id")
   .delete(async (req, res, next) => {
     try {
       await ElementLogServices.deleteLog(req.app.get("db"), req.log.id);
+      // check if checkmark log should be deleted.
+      // check if ribbon log should be deleted.
+      // if so delete ribbon and badge entry.
       res.status(204).send(`Log with id: ${req.log.id} deleted.`);
     } catch (error) {
       next(error);

@@ -1,6 +1,6 @@
 # /skater routes
 
-GET http://localhost:8000/skater/ HTTP/1.1
+GET http://localhost:8000/api/skater/ HTTP/1.1
 
 ###
 
@@ -42,7 +42,7 @@ GET http://localhost:8000/api/element HTTP/1.1
 GET http://localhost:8000/api/log HTTP/1.1
 
 ###
-POST http://localhost:8000/api/log HTTP/1.1
+POST http://localhost:8001/api/log HTTP/1.1
 content-type: application/json
 
 {
