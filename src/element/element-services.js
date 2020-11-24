@@ -17,7 +17,7 @@ const ElementServices = {
         "canskate_checkmarks.id as checkmark_id",
         "canskate_ribbons.id as ribbon_id",
         "canskate_ribbons.fundamental_area as fundamental",
-        "canskate_ribbons.stage as badge",
+        "canskate_ribbons.stage as badge_id",
       );
   },
 };

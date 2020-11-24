@@ -13,7 +13,7 @@ const SessionServices = {
     return knex('canskate_sessions').where({id}).update(session);
   },
   deleteSkater(knex,id){
-    return knex('canskate_session').where({id}).delete();
+    return knex('canskate_sessions').where({id}).delete();
   }
 }
 

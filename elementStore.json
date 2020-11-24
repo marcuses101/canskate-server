@@ -6,7 +6,7 @@
       "checkmark_id": "1B1",
       "ribbon_id": "1B",
       "fundamental": "Balance",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Fwd push/glide sequence",
@@ -14,7 +14,7 @@
       "checkmark_id": "1B2",
       "ribbon_id": "1B",
       "fundamental": "Balance",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Fwd 2-foot glide",
@@ -22,7 +22,7 @@
       "checkmark_id": "1B3",
       "ribbon_id": "1B",
       "fundamental": "Balance",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Fwd 2-foot sit glide",
@@ -30,7 +30,7 @@
       "checkmark_id": "1B4",
       "ribbon_id": "1B",
       "fundamental": "Balance",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Snow slide steps Right",
@@ -38,7 +38,7 @@
       "checkmark_id": "1C1",
       "ribbon_id": "1C",
       "fundamental": "Control",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Snow slide steps Left",
@@ -46,7 +46,7 @@
       "checkmark_id": "1C1",
       "ribbon_id": "1C",
       "fundamental": "Control",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Bwd 2-foot skating/walking",
@@ -54,7 +54,7 @@
       "checkmark_id": "1C2",
       "ribbon_id": "1C",
       "fundamental": "Control",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Bwd 2-foot glide",
@@ -62,7 +62,7 @@
       "checkmark_id": "1C3",
       "ribbon_id": "1C",
       "fundamental": "Control",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "2-foot turn CW",
@@ -70,7 +70,7 @@
       "checkmark_id": "1A1",
       "ribbon_id": "1A",
       "fundamental": "Agility",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "2-foot turn CCW",
@@ -78,7 +78,7 @@
       "checkmark_id": "1A1",
       "ribbon_id": "1A",
       "fundamental": "Agility",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "2-foot jump",
@@ -86,7 +86,7 @@
       "checkmark_id": "1A2",
       "ribbon_id": "1A",
       "fundamental": "Agility",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Fwd skating perimeter of ice",
@@ -94,7 +94,7 @@
       "checkmark_id": "1A3",
       "ribbon_id": "1A",
       "fundamental": "Agility",
-      "badge": 1
+      "stage": 1
     },
     {
       "element": "Fwd 2-foot sculling",
@@ -102,7 +102,7 @@
       "checkmark_id": "2B1",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 2-foot to 1-foot glide Right",
@@ -110,7 +110,7 @@
       "checkmark_id": "2B2",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 2-foot to 1-foot glide Left",
@@ -118,7 +118,7 @@
       "checkmark_id": "2B2",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd push/glide sequence",
@@ -126,7 +126,7 @@
       "checkmark_id": "2B3",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 1-foot glide with speed Right",
@@ -134,7 +134,7 @@
       "checkmark_id": "2B4",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 1-foot glide with speed Left",
@@ -142,7 +142,7 @@
       "checkmark_id": "2B4",
       "ribbon_id": "2B",
       "fundamental": "Balance",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd stop",
@@ -150,7 +150,7 @@
       "checkmark_id": "2C1",
       "ribbon_id": "2C",
       "fundamental": "Control",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Bwd 2-foot sit glide",
@@ -158,7 +158,7 @@
       "checkmark_id": "2C2",
       "ribbon_id": "2C",
       "fundamental": "Control",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Bwd 2-foot to 1-foot glide Right",
@@ -166,7 +166,7 @@
       "checkmark_id": "2C3",
       "ribbon_id": "2C",
       "fundamental": "Control",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Bwd 2-foot to 1-foot glide Left",
@@ -174,7 +174,7 @@
       "checkmark_id": "2C3",
       "ribbon_id": "2C",
       "fundamental": "Control",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Bwd push/glide sequence",
@@ -182,7 +182,7 @@
       "checkmark_id": "2C4",
       "ribbon_id": "2C",
       "fundamental": "Control",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 2-foot turn",
@@ -190,7 +190,7 @@
       "checkmark_id": "2A1",
       "ribbon_id": "2A",
       "fundamental": "Agility",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Bwd 2-foot turn",
@@ -198,7 +198,7 @@
       "checkmark_id": "2A2",
       "ribbon_id": "2A",
       "fundamental": "Agility",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 180 glide turn CW",
@@ -206,7 +206,7 @@
       "checkmark_id": "2A3",
       "ribbon_id": "2A",
       "fundamental": "Agility",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 180 glide turn CCW",
@@ -214,7 +214,7 @@
       "checkmark_id": "2A3",
       "ribbon_id": "2A",
       "fundamental": "Agility",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd 2-foot jump",
@@ -222,7 +222,7 @@
       "checkmark_id": "2A4",
       "ribbon_id": "2A",
       "fundamental": "Agility",
-      "badge": 2
+      "stage": 2
     },
     {
       "element": "Fwd stationary blade push Right",
@@ -230,7 +230,7 @@
       "checkmark_id": "3B1",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd stationary blade push Left",
@@ -238,7 +238,7 @@
       "checkmark_id": "3B1",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd 2-foot slalom",
@@ -246,7 +246,7 @@
       "checkmark_id": "3B2",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd circle thrusts CW",
@@ -254,7 +254,7 @@
       "checkmark_id": "3B3",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd cirlcle thrusts CCW",
@@ -262,7 +262,7 @@
       "checkmark_id": "3B3",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Walking crosscuts CW",
@@ -270,7 +270,7 @@
       "checkmark_id": "3B4",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Walking crosscuts CCW",
@@ -278,7 +278,7 @@
       "checkmark_id": "3B4",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd 2-foot to 1-foot curve glide Right",
@@ -286,7 +286,7 @@
       "checkmark_id": "3B5",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd 2-foot to 1-foot curve glide Left",
@@ -294,7 +294,7 @@
       "checkmark_id": "3B5",
       "ribbon_id": "3B",
       "fundamental": "Balance",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd stop with speed Right",
@@ -302,7 +302,7 @@
       "checkmark_id": "3C1",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd stop with speed Left",
@@ -310,7 +310,7 @@
       "checkmark_id": "3C1",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd stop with speed Both",
@@ -318,7 +318,7 @@
       "checkmark_id": "3C1",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 2-foot sculling",
@@ -326,7 +326,7 @@
       "checkmark_id": "3C2",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 2-foot to 1-foot glide Right",
@@ -334,7 +334,7 @@
       "checkmark_id": "3C3",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 2-foot to 1-foot glide Left",
@@ -342,7 +342,7 @@
       "checkmark_id": "3C3",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd push/glide sequence",
@@ -350,7 +350,7 @@
       "checkmark_id": "3C4",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 1-foot glide Right",
@@ -358,7 +358,7 @@
       "checkmark_id": "3C5",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 1-foot glide Left",
@@ -366,7 +366,7 @@
       "checkmark_id": "3C5",
       "ribbon_id": "3C",
       "fundamental": "Control",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd 2-foot quick turn",
@@ -374,7 +374,7 @@
       "checkmark_id": "3A1",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 2-foot quick turn",
@@ -382,7 +382,7 @@
       "checkmark_id": "3A2",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd 360 step turn",
@@ -390,7 +390,7 @@
       "checkmark_id": "3A3",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Bwd 2-foot jump",
@@ -398,7 +398,7 @@
       "checkmark_id": "3A4",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fast fwd perimeter skating CW",
@@ -406,7 +406,7 @@
       "checkmark_id": "3A5",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fast fwd perimeter skating CCW",
@@ -414,7 +414,7 @@
       "checkmark_id": "3A5",
       "ribbon_id": "3A",
       "fundamental": "Agility",
-      "badge": 3
+      "stage": 3
     },
     {
       "element": "Fwd crosscuts CW",
@@ -422,7 +422,7 @@
       "checkmark_id": "4B1",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd crosscuts CCW",
@@ -430,7 +430,7 @@
       "checkmark_id": "4B1",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd inside slalom",
@@ -438,7 +438,7 @@
       "checkmark_id": "4B2",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd outside slalom",
@@ -446,7 +446,7 @@
       "checkmark_id": "4B3",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd drag",
@@ -454,7 +454,7 @@
       "checkmark_id": "4B4",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd spiral",
@@ -462,7 +462,7 @@
       "checkmark_id": "4B5",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Drop down drill",
@@ -470,7 +470,7 @@
       "checkmark_id": "4B6",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd \"V\" start",
@@ -478,7 +478,7 @@
       "checkmark_id": "4B7",
       "ribbon_id": "4B",
       "fundamental": "Balance",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd stop",
@@ -486,7 +486,7 @@
       "checkmark_id": "4C1",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd circle thrusts CW",
@@ -494,7 +494,7 @@
       "checkmark_id": "4C2",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd circle thrusts CCW",
@@ -502,7 +502,7 @@
       "checkmark_id": "4C2",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd 2-foot slalom",
@@ -510,7 +510,7 @@
       "checkmark_id": "4C3",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd 1-foot glide with speed",
@@ -518,7 +518,7 @@
       "checkmark_id": "4C4",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd 1-foot glide from blue line to blue line",
@@ -526,7 +526,7 @@
       "checkmark_id": "4C5",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Skate goal line to 1st blue line in under 9sec",
@@ -534,7 +534,7 @@
       "checkmark_id": "4C6",
       "ribbon_id": "4C",
       "fundamental": "Control",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd 1-foot turn (small curve) FI",
@@ -542,7 +542,7 @@
       "checkmark_id": "4A1",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd 1-foot turn (small curve) FO",
@@ -550,7 +550,7 @@
       "checkmark_id": "4A1",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd 360 step turn",
@@ -558,7 +558,7 @@
       "checkmark_id": "4A2",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd to bwd 2-foot jump",
@@ -566,7 +566,7 @@
       "checkmark_id": "4A3",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Bwd to fwd 2-foot jump",
@@ -574,7 +574,7 @@
       "checkmark_id": "4A4",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "2-foot spin",
@@ -582,7 +582,7 @@
       "checkmark_id": "4A5",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "2-foot sit spin",
@@ -590,7 +590,7 @@
       "checkmark_id": "4A6",
       "ribbon_id": "4A",
       "fundamental": "Agility",
-      "badge": 4
+      "stage": 4
     },
     {
       "element": "Fwd crosscuts - figure 8",
@@ -598,7 +598,7 @@
       "checkmark_id": "5B1",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd inside edges",
@@ -606,7 +606,7 @@
       "checkmark_id": "5B2",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd push/glide sequence",
@@ -614,7 +614,7 @@
       "checkmark_id": "5B3",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd perimeter stroking with jumps",
@@ -622,7 +622,7 @@
       "checkmark_id": "5B4",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Inside spread eagle",
@@ -630,7 +630,7 @@
       "checkmark_id": "5B5",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 1-foot slalom",
@@ -638,7 +638,7 @@
       "checkmark_id": "5B6",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Running lateral crossovers",
@@ -646,7 +646,7 @@
       "checkmark_id": "5B7",
       "ribbon_id": "5B",
       "fundamental": "Balance",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 2-foot side stop CW",
@@ -654,7 +654,7 @@
       "checkmark_id": "5C1",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 2-foot side stop CCW",
@@ -662,7 +662,7 @@
       "checkmark_id": "5C1",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd stop with speed Right",
@@ -670,7 +670,7 @@
       "checkmark_id": "5C2",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd stop with speed Left",
@@ -678,7 +678,7 @@
       "checkmark_id": "5C2",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd stop with speed Both",
@@ -686,7 +686,7 @@
       "checkmark_id": "5C2",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd crosscuts CW",
@@ -694,7 +694,7 @@
       "checkmark_id": "5C3",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd crosscuts CCW",
@@ -702,7 +702,7 @@
       "checkmark_id": "5C3",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd inside slalom",
@@ -710,7 +710,7 @@
       "checkmark_id": "5C4",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd push/glide sequence",
@@ -718,7 +718,7 @@
       "checkmark_id": "5C5",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Bwd spiral",
@@ -726,7 +726,7 @@
       "checkmark_id": "5C6",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Skate goal line to 2nd blue line in 12 seconds or less",
@@ -734,7 +734,7 @@
       "checkmark_id": "5C7",
       "ribbon_id": "5C",
       "fundamental": "Control",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 1-foot turn (large curve) LFI",
@@ -742,7 +742,7 @@
       "checkmark_id": "5A1",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 1-foot turn (large curve) LFO",
@@ -750,7 +750,7 @@
       "checkmark_id": "5A1",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 1-foot turn (large curve) RFI",
@@ -758,7 +758,7 @@
       "checkmark_id": "5A1",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 1-foot turn (large curve) RFO",
@@ -766,7 +766,7 @@
       "checkmark_id": "5A1",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 360 glide turn CW",
@@ -774,7 +774,7 @@
       "checkmark_id": "5A2",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd 360 glide turn CCW",
@@ -782,7 +782,7 @@
       "checkmark_id": "5A2",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd to bwd 1-foot jump FI",
@@ -790,7 +790,7 @@
       "checkmark_id": "5A3",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd to bwd 1-foot jump F0",
@@ -798,7 +798,7 @@
       "checkmark_id": "5A3",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd power jump",
@@ -806,7 +806,7 @@
       "checkmark_id": "5A4",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "1-foot spin",
@@ -814,7 +814,7 @@
       "checkmark_id": "5A5",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Alternating foot spin",
@@ -822,7 +822,7 @@
       "checkmark_id": "5A6",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd tight glide turns",
@@ -830,7 +830,7 @@
       "checkmark_id": "5A7",
       "ribbon_id": "5A",
       "fundamental": "Agility",
-      "badge": 5
+      "stage": 5
     },
     {
       "element": "Fwd power crosscuts CW",
@@ -838,7 +838,7 @@
       "checkmark_id": "6B1",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd power crosscuts CCW",
@@ -846,7 +846,7 @@
       "checkmark_id": "6B1",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd perimeter skating with crosscuts CW",
@@ -854,7 +854,7 @@
       "checkmark_id": "6B2",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd perimeter skating with crosscuts CCW",
@@ -862,7 +862,7 @@
       "checkmark_id": "6B2",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd outside edges",
@@ -870,7 +870,7 @@
       "checkmark_id": "6B3",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 1-foot slalom",
@@ -878,7 +878,7 @@
       "checkmark_id": "6B4",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd shoot the duck",
@@ -886,7 +886,7 @@
       "checkmark_id": "6B5",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd perimeter skating with side stops",
@@ -894,7 +894,7 @@
       "checkmark_id": "6B6",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd spiral on a curve",
@@ -902,7 +902,7 @@
       "checkmark_id": "6B7",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd crossover acceleration",
@@ -910,7 +910,7 @@
       "checkmark_id": "6B8",
       "ribbon_id": "6B",
       "fundamental": "Balance",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 1-foot side stop",
@@ -918,7 +918,7 @@
       "checkmark_id": "6C1",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 2-foot side stop with speed CW",
@@ -926,7 +926,7 @@
       "checkmark_id": "6C2",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 2-foot side stop with speed CCW",
@@ -934,7 +934,7 @@
       "checkmark_id": "6C2",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd outside slalom",
@@ -942,7 +942,7 @@
       "checkmark_id": "6C3",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd crosscuts - figure 8",
@@ -950,7 +950,7 @@
       "checkmark_id": "6C4",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd perimeter skating with crosscuts CW",
@@ -958,7 +958,7 @@
       "checkmark_id": "6C5",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd perimeter skating with crosscuts CCW",
@@ -966,7 +966,7 @@
       "checkmark_id": "6C5",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd 1-foot slalom",
@@ -974,7 +974,7 @@
       "checkmark_id": "6C6",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd 1-foot spid",
@@ -982,7 +982,7 @@
       "checkmark_id": "6C7",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Skate perimeter of ice in under 35sec",
@@ -990,7 +990,7 @@
       "checkmark_id": "6C8",
       "ribbon_id": "6C",
       "fundamental": "Control",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 180 C-step Right",
@@ -998,7 +998,7 @@
       "checkmark_id": "6A1",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 180 C-step Left",
@@ -1006,7 +1006,7 @@
       "checkmark_id": "6A1",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd 180 C-step Right",
@@ -1014,7 +1014,7 @@
       "checkmark_id": "6A2",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd 180 C-step Left",
@@ -1022,7 +1022,7 @@
       "checkmark_id": "6A2",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "2-foot multi-turns",
@@ -1030,7 +1030,7 @@
       "checkmark_id": "6A3",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Rotating power jump",
@@ -1038,7 +1038,7 @@
       "checkmark_id": "6A4",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd toe-assisted jump",
@@ -1046,7 +1046,7 @@
       "checkmark_id": "6A5",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Bwd 360 2-foot jump",
@@ -1054,7 +1054,7 @@
       "checkmark_id": "6A6",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 1-foot spin with spiraling edge",
@@ -1062,7 +1062,7 @@
       "checkmark_id": "6A7",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 2-foot reverse pivot turn CW",
@@ -1070,7 +1070,7 @@
       "checkmark_id": "6A8",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     },
     {
       "element": "Fwd 2-foot reverse pivot turn CCW",
@@ -1078,7 +1078,7 @@
       "checkmark_id": "6A8",
       "ribbon_id": "6A",
       "fundamental": "Agility",
-      "badge": 6
+      "stage": 6
     }
   ],
   "checkmarks": [

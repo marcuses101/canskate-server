@@ -4,9 +4,6 @@ const knex = require('knex')
 const ElementServices = require('./src/element/element-services');
 const CheckmarkServices = require("./src/element/checkmark-services");
 const RibbonServices = require("./src/element/ribbon-services");
-const 
-const {memoize} = require('./utils/utils');
-
 const db = knex({
   client:"pg",
   connection: process.env.DATABASE_URL
@@ -23,10 +20,9 @@ async function getStore(db){
   return store;
 }
 
-const getElementStore = memoize(getStore);
 
 (async()=>{
-  const store = await getElementStore(db);
+  const store = await getStore(db)
 
  await fs.writeFile('./elementStore.json',JSON.stringify(store));
  process.exit()

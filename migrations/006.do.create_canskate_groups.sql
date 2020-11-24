@@ -1,8 +1,11 @@
 CREATE TYPE colors as ENUM (
   'Red',
+  'Orange',
+  'Yellow',
   'Green',
   'Blue',
-  'Yellow'
+  'Purple',
+  'Turquoise'
 );
 
 CREATE TABLE canskate_groups (
