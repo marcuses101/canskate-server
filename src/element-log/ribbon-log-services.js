@@ -20,6 +20,13 @@ const RibbonLogServices = {
   deleteLog(knex, id) {
     return knex("canskate_ribbon_log").where({ id }).delete();
   },
+  async deleteLogBySkaterRibbon(knex, skater_id, ribbon_id) {
+    const rows = await knex("canskate_ribbon_log")
+      .where({ skater_id, ribbon_id })
+      .delete()
+      .returning("*");
+    return rows[0];
+  },
 };
 
 module.exports = RibbonLogServices;

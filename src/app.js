@@ -32,6 +32,7 @@ app.use('/api/session',SessionRouter);
 app.use('/api/element',ElementRouter);
 app.use('/api/log', ElementLogRouter);
 
+// eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   let response;
   if (NODE_ENV === "production") {

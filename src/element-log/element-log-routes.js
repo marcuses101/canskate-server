@@ -85,12 +85,12 @@ ElementLogRouter.route("/")
       //send response if no further logs are required
       if (completedRibbons !== 3) return res.json(responseObject);
 
-      responseObject.badge_log = await BadgeLogServices.insertLog(db,{
+      responseObject.badge_log = await BadgeLogServices.insertLog(db, {
         skater_id,
         badge_id,
-        date_completed
-      })
-      res.json(responseObject)
+        date_completed,
+      });
+      res.json(responseObject);
     } catch (error) {
       next(error);
     }
@@ -129,11 +129,71 @@ ElementLogRouter.route("/:id")
   })
   .delete(async (req, res, next) => {
     try {
-      await ElementLogServices.deleteLog(req.app.get("db"), req.log.id);
-      // check if checkmark log should be deleted.
-      // check if ribbon log should be deleted.
-      // if so delete ribbon and badge entry.
-      res.status(204).send(`Log with id: ${req.log.id} deleted.`);
+      const db = req.app.get("db");
+      await ElementLogServices.deleteLog(db, req.log.id);
+      const { skater_id, element_id } = req.log;
+      const checkmark_id = element_id.slice(0, 3);
+      const ribbon_id = element_id.slice(0, 2);
+      const badge_id = element_id.slice(0, 1);
+      const responseObj = {
+        deletedLogs: {
+          element_log_id: req.log.id,
+          checkmark_log_id: null,
+          ribbon_log_id: null,
+          badge_log_id: null,
+        },
+      };
+      const {
+        id: deletedCheckmarkLogId,
+      } = await CheckmarkLogServices.deleteLogBySkaterCheckmark(
+        db,
+        skater_id,
+        checkmark_id
+      );
+
+      responseObj.deletedLogs.checkmark_log_id = deletedCheckmarkLogId;
+
+      const { checkmarks_required } = await RibbonServices.getRibbonById(
+        db,
+        ribbon_id
+      );
+
+      const completedCheckmarks = await CheckmarkLogServices.countCompletedCheckmarksByRibbon(
+        db,
+        skater_id,
+        ribbon_id
+      );
+
+      if (!completedCheckmarks == checkmarks_required - 1) {
+        return res.json(responseObj);
+      }
+
+      const {
+        id: deletedRibbonLogId,
+      } = await RibbonLogServices.deleteLogBySkaterRibbon(
+        db,
+        skater_id,
+        ribbon_id
+      );
+
+      responseObj.deletedLogs.ribbon_log_id = deletedRibbonLogId;
+
+      const completedRibbons = await RibbonLogServices.countCompletedRibbonsByBadge(
+        db,skater_id,
+        badge_id
+      );
+      if (completedRibbons != 2) return res.json(responseObj);
+
+      const {
+        id: deletedBadgeLogId,
+      } = await BadgeLogServices.deleteLogBySkaterBadge(
+        db,
+        skater_id,
+        badge_id
+      );
+      responseObj.deletedLogs.badge_log_id = deletedBadgeLogId;
+      res.json(responseObj);
+
     } catch (error) {
       next(error);
     }

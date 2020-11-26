@@ -12,6 +12,13 @@ const BadgeLogServices = {
   deleteLog(knex, id) {
     return knex("canskate_badge_log").where({ id }).delete();
   },
+  async deleteLogBySkaterBadge(knex, skater_id, badge_id) {
+    const rows = await knex("canskate_badge_log")
+      .where({ skater_id, badge_id })
+      .delete()
+      .returning("*");
+    return rows[0];
+  },
 };
 
 module.exports = BadgeLogServices;

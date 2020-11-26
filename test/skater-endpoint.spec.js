@@ -4,7 +4,7 @@ const knex = require("knex");
 const {makeSkatersArray,generateSkater} = require("./skater.fixtures");
 const app = require("../src/app");
 
-describe("/skater endpoints", () => {
+describe("/api/skater endpoints", () => {
   let db = {};
   const skaters = makeSkatersArray();
   function cleanup(){
