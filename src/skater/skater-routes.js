@@ -58,7 +58,7 @@ skaterRouter
       next(error);
     }
   })
-  .get((req,res)=>res.json(req.skater))
+  .get((req, res) => res.json(req.skater))
   .patch(async (req, res, next) => {
     try {
       const { fullname, gender, birthdate } = req.body;
@@ -66,14 +66,26 @@ skaterRouter
       if (!Object.values(updatedSkater).some(Boolean)) {
         return res
           .status(400)
-          .send(`'fullname', 'gender', and/or 'birthdate' required`);
+          .json({
+            error: {
+              message: `'fullname', 'gender', and/or 'birthdate' required`,
+            },
+          });
       }
-      await skaterServices.updateSkater(
+      if (!["Male", "Female", "Other"].includes(gender))
+        return res
+          .status(400)
+          .json({
+            error: {
+              message: `Please select Male, Female, or Other for gender`,
+            },
+          });
+     const databaseSkater =  await skaterServices.updateSkater(
         req.app.get("db"),
         req.skater.id,
         updatedSkater
       );
-      res.status(204).send(`Skater id: ${req.skater.id} updated`);
+      res.status(200).json(databaseSkater);
     } catch (error) {
       next(error);
     }

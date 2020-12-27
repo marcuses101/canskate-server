@@ -5,6 +5,7 @@ const SkaterServices = require('./src/skater/skater-services')
 const GroupServices = require('./src/group/group-services')
 const SessionServices = require('./src/session/session-services')
 const SkaterGroupListServices = require('./src/skater-group-list/skater-group-list-services')
+const {SkaterSessionListServices} = require('./src/skater-session-list/skater-session-list-services')
 const db = knex({
   client:"pg",
   connection: process.env.DATABASE_URL
@@ -12,13 +13,14 @@ const db = knex({
 
 async function getStore(db){
 
-  const [skaters, groups, sessions,skaterGroupEntries] = await Promise.all([
+  const [skaters, groups, sessions,skaterGroupEntries, skaterSessionEntries] = await Promise.all([
     SkaterServices.getAllSkaters(db),
     GroupServices.getAllGroups(db),
     SessionServices.getAllSessions(db),
-    SkaterGroupListServices.getAllEntries(db)
+    SkaterGroupListServices.getAllEntries(db),
+    SkaterSessionListServices.getAllEntries(db)
   ]);
-  const store = {skaters,groups,sessions,skaterGroupEntries};
+  const store = {skaters,groups,sessions,skaterGroupEntries, skaterSessionEntries};
   return store;
 }
 

@@ -12,6 +12,7 @@ function genderGenerator(){
 }
 
 function generateSkater(){
+
   return {
     fullname: `${faker.name.firstName()} ${faker.name.lastName()}`,
     gender: genderGenerator(),

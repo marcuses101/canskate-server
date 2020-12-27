@@ -9,8 +9,8 @@ const SessionServices = {
   getSessionById(knex,id){
     return knex.select('*').from("canskate_sessions").where({id}).first();
   },
-  updateSession(knex,id,session){
-    return knex('canskate_sessions').where({id}).update(session);
+  async updateSession(knex,id,session){
+    return (await knex('canskate_sessions').where({id}).update(session).returning('*'))[0] ;
   },
   deleteSkater(knex,id){
     return knex('canskate_sessions').where({id}).delete();

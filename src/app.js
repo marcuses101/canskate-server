@@ -20,6 +20,13 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
+// limit request to frontend.
+
+// app.use((req,res,next)=>{
+//   console.log(req.get('Referer'));
+//   if (req.get('Referer') !== 'http://localhost:3001/') return res.status(400).send('error')
+//   next();
+// })
 
 app.get("/", (req, res) => {
   res.send("Hello, world!");

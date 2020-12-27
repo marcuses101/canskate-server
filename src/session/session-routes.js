@@ -63,14 +63,14 @@ SessionRouter.route("/:id")
       if (!Object.values(requestSession).some(Boolean)) {
         return res
           .status(400)
-          .send("day, start_time, and/or duration is required");
+          .json({error:{message:"day, start_time, and/or duration is required"}});
       }
-      await SessionServices.updateSession(
+     const responseSession =  await SessionServices.updateSession(
         req.app.get("db"),
         req.session.id,
         requestSession
       );
-      res.send(`Session id: ${req.session.id} updated`);
+      res.status(200).json(responseSession)
     } catch (error) {
       next(error);
     }
