@@ -39,3 +39,4 @@ GET http://localhost:8000/api/element HTTP/1.1
 
 ###
 
+GET http://localhost:8000/api/log HTTP/1.1

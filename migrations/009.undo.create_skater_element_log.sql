@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS skater_element_log;

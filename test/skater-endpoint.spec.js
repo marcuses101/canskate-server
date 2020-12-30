@@ -20,7 +20,7 @@ describe("/api/skater endpoints", () => {
       client: "pg",
       connection: process.env.TEST_DATABASE_URL,
     });
-    return app.set("db", db);
+    app.set("db", db);
   });
   after("disconnect from db", () => {
     return db.destroy();
@@ -33,6 +33,7 @@ describe("/api/skater endpoints", () => {
     describe("/api/skater route", () => {
 
       beforeEach("populate skaters table", populateSkaters);
+
       afterEach("cleanup",cleanup);
 
       it("GET responds with 200 and all the skaters", async () => {
@@ -45,17 +46,20 @@ describe("/api/skater endpoints", () => {
       });
     });
     describe("/api/skater/:id route", () => {
+
       beforeEach("populate skaters table", populateSkaters);
+
       afterEach("cleanup",cleanup);
-      it("PATCH responds with 204 and updates the skater",async () => {
+
+      it("PATCH responds with 200 and updates the skater",async () => {
         const id = 3
         const expectedSkater = skaters.find(skater=>skater.id == id);
         expectedSkater.fullname = "George Washington"
-        await supertest(app).patch(`/api/skater/${id}`).send({fullname: 'George Washington'}).expect(204);
-        const {body: databaseSkater} = await supertest(app).get(`/api/skater/${id}`);
-        databaseSkater.birthdate = new Date(databaseSkater.birthdate).toLocaleDateString();
-        expect(databaseSkater).to.eql(expectedSkater);
+        const {body: responseSkater} = await supertest(app).patch(`/api/skater/${id}`).send({fullname: 'George Washington'}).expect(200);
+        responseSkater.birthdate = new Date(responseSkater.birthdate).toLocaleDateString();
+        expect(responseSkater).to.eql(expectedSkater);
       });
+
       it("DELETE responds with 204 and deletes the skater",async () => {
         const id = 2;
         const deletedSkaters = skaters.filter(skater => skater.id != id)

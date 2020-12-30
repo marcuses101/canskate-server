@@ -1,5 +1,5 @@
 CREATE TYPE sex AS ENUM(
-  'Male','Female'
+  'Male','Female', 'Other'
 );
 
 CREATE TABLE skaters (

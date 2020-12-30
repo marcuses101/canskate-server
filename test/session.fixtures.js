@@ -1,6 +1,5 @@
 const faker = require('faker');
 
-console.log(faker.date.weekday());
 
 function generateSession(){
   return {
@@ -8,4 +7,5 @@ function generateSession(){
     start_time: faker.time
   }
 }
-console.log(generateSession())
+
+module.exports = {generateSession}

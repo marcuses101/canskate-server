@@ -2,6 +2,9 @@ const CheckmarkLogServices = {
   getLogs(knex) {
     return knex.select("*").from("canskate_checkmark_log");
   },
+  getLogsBySkaterId(knex,skater_id){
+    return knex.select('*').from("canskate_checkmark_log").where({skater_id})
+  },
   async countCompletedCheckmarksByRibbon(knex, skater_id, ribbon_id) {
     const { count } = await knex("canskate_checkmark_log")
       .count()

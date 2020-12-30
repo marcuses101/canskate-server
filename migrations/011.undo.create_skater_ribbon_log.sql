@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS skater_ribbon_log;

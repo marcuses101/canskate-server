@@ -16,7 +16,7 @@ function generateGroup (){
 }
 
 function makeGroupArray(arraySize) {
-  return [...Array(10)].map(generateGroup);
+  return [...Array(arraySize)].map(generateGroup);
 }
 
 

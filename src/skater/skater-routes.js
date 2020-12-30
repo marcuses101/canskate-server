@@ -1,6 +1,10 @@
 const express = require("express");
 const path = require("path");
 const xss = require("xss");
+const ElementLogServices = require("../element-log/element-log-services");
+const CheckmarkLogServices = require('../element-log/checkmark-log-services')
+const RibbonLogServices = require('../element-log/ribbon-log-services')
+const BadgeLogServices = require('../element-log/badge-log-services')
 const skaterServices = require("./skater-services");
 const skaterRouter = express.Router();
 
@@ -13,7 +17,14 @@ skaterRouter
   .get(async (req, res, next) => {
     try {
       const skaters = await skaterServices.getAllSkaters(req.app.get("db"));
-      res.json(skaters.map(serializeSkater));
+     const skatersWithLogs = await Promise.all(skaters.map(async (skater)=>{
+      const elementLog = await ElementLogServices.getLogsBySkaterId(req.app.get('db'),skater.id);
+      const checkmarkLog = await CheckmarkLogServices.getLogsBySkaterId(req.app.get('db'),skater.id);
+      const ribbonLog = await RibbonLogServices.getLogsBySkaterId(req.app.get('db'),skater.id)
+      const badgeLog = await BadgeLogServices.getLogsBySkaterId(req.app.get('db'),skater.id)
+      return {...skater, elementLog,checkmarkLog,ribbonLog,badgeLog};
+     }))
+      res.json(skatersWithLogs.map(serializeSkater));
     } catch (error) {
       next(error);
     }
@@ -64,6 +75,7 @@ skaterRouter
       const { fullname, gender, birthdate } = req.body;
       const updatedSkater = { fullname, gender, birthdate };
       if (!Object.values(updatedSkater).some(Boolean)) {
+
         return res
           .status(400)
           .json({
@@ -72,7 +84,7 @@ skaterRouter
             },
           });
       }
-      if (!["Male", "Female", "Other"].includes(gender))
+      if (gender && !["Male", "Female", "Other"].includes(gender))
         return res
           .status(400)
           .json({

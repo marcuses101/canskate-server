@@ -2,6 +2,10 @@ const RibbonLogServices = {
   getLogs(knex) {
     return knex.select("*").from("canskate_ribbon_log");
   },
+  getLogsBySkaterId(knex,skater_id){
+    return knex.select('*').from('canskate_ribbon_log').where({skater_id})
+  }
+  ,
   async insertLog(knex, log) {
     const rows = await knex
       .insert(log)

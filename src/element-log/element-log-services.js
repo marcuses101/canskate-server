@@ -5,6 +5,9 @@ const ElementLogServices = {
   getLogById(knex, id) {
     return knex.select("*").from("canskate_element_log").where({ id }).first();
   },
+  getLogsBySkaterId(knex,skater_id) {
+    return knex.select("*").from("canskate_element_log").where({skater_id});
+  },
   async countCompletedElementsByCheckmark(knex, skater_id, checkmark_id) {
     const {count} = await knex("canskate_element_log")
       .count()

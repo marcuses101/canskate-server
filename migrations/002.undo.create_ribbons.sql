@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS ribbons;
+DROP TYPE IF EXISTS fundamental

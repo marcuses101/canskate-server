@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS skater_badge_log;

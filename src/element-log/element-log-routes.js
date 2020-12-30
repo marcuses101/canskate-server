@@ -12,8 +12,11 @@ module.exports = ElementLogRouter;
 ElementLogRouter.route("/")
   .get(async (req, res, next) => {
     try {
-      const logs = await ElementLogServices.getLogs(req.app.get("db"));
-      res.json(logs);
+      const elementLogs = await ElementLogServices.getLogs(req.app.get("db"));
+      const checkmarkLogs = await CheckmarkLogServices.getLogs(req.app.get('db'));
+      const ribbonLogs = await RibbonLogServices.getLogs(req.app.get('db'));
+      const badgeLogs = await BadgeLogServices.getLogs(req.app.get('db'))
+      res.json({elementLogs,checkmarkLogs,ribbonLogs,badgeLogs});
     } catch (error) {
       next(error);
     }

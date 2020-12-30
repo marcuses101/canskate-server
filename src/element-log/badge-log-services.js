@@ -2,6 +2,9 @@ const BadgeLogServices = {
   getLogs(knex) {
     return knex.select("*").from("canskate_badge_log");
   },
+  getLogsBySkaterId(knex,skater_id){
+    return knex.select("*").from('canskate_badge_log').where({skater_id})
+  },
   async insertLog(knex, log) {
     const rows = await knex
       .insert(log)
