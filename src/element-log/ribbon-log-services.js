@@ -1,20 +1,20 @@
 const RibbonLogServices = {
   getLogs(knex) {
-    return knex.select("*").from("canskate_ribbon_log");
+    return knex.select("*").from("skater_ribbon_log");
   },
   getLogsBySkaterId(knex,skater_id){
-    return knex.select('*').from('canskate_ribbon_log').where({skater_id})
+    return knex.select('*').from('skater_ribbon_log').where({skater_id})
   }
   ,
   async insertLog(knex, log) {
     const rows = await knex
       .insert(log)
-      .into("canskate_ribbon_log")
+      .into("skater_ribbon_log")
       .returning("*");
     return rows[0];
   },
   async countCompletedRibbonsByBadge(knex, skater_id, badge_id) {
-    const { count } = await knex("canskate_ribbon_log")
+    const { count } = await knex("skater_ribbon_log")
       .count()
       .where({ skater_id })
       .where("ribbon_id", "LIKE", `${badge_id}%`)
@@ -22,10 +22,10 @@ const RibbonLogServices = {
     return parseInt(count);
   },
   deleteLog(knex, id) {
-    return knex("canskate_ribbon_log").where({ id }).delete();
+    return knex("skater_ribbon_log").where({ id }).delete();
   },
   async deleteLogBySkaterRibbon(knex, skater_id, ribbon_id) {
-    const rows = await knex("canskate_ribbon_log")
+    const rows = await knex("skater_ribbon_log")
       .where({ skater_id, ribbon_id })
       .delete()
       .returning("*");

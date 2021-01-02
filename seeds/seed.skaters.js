@@ -20,7 +20,7 @@ function generateSkater(){
   }
 }
 
-const skaters = [...Array(200)].map(()=>generateSkater());
+const skaters = [...Array(100)].map(()=>generateSkater());
 
 (async()=>{
   await db.insert(skaters).into('skaters')

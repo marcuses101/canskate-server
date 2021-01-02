@@ -2,19 +2,19 @@ function makeClubsArray() {
   return [
     {
       id: 1,
-      club_name: "CP Olympique",
+      name: "CP Olympique",
     },
     {
       id:2,
-      club_name: "Silver Wings SC"
+      name: "Silver Wings SC"
     },
     {
       id:3,
-      club_name: 'Patinage Plateau'
+      name: 'Patinage Plateau'
     },
     {
       id:4,
-      club_name: "Marcus's Cool Club"
+      name: "Marcus's Cool Club"
     }
   ];
 }

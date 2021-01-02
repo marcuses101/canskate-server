@@ -11,6 +11,7 @@ const ElementRouter = require('./element/element-routes');
 const ElementLogRouter = require('./element-log/element-log-routes');
 const GroupRouter = require('./group/group-routes');
 const SessionRouter = require("./session/session-routes");
+const ClubRouter = require('./club/club-routes')
 
 const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 
@@ -36,6 +37,7 @@ app.get("/", (req, res) => {
 app.use('/api/skater',skaterRouter);
 app.use('/api/group',GroupRouter);
 app.use('/api/session',SessionRouter);
+app.use('/api/club',ClubRouter)
 app.use('/api/element',ElementRouter);
 app.use('/api/log', ElementLogRouter);
 

@@ -1,15 +1,15 @@
 const ElementLogServices = {
   getLogs(knex) {
-    return knex.select("*").from("canskate_element_log");
+    return knex.select("*").from("skater_element_log");
   },
   getLogById(knex, id) {
-    return knex.select("*").from("canskate_element_log").where({ id }).first();
+    return knex.select("*").from("skater_element_log").where({ id }).first();
   },
   getLogsBySkaterId(knex,skater_id) {
-    return knex.select("*").from("canskate_element_log").where({skater_id});
+    return knex.select("*").from("skater_element_log").where({skater_id});
   },
   async countCompletedElementsByCheckmark(knex, skater_id, checkmark_id) {
-    const {count} = await knex("canskate_element_log")
+    const {count} = await knex("skater_element_log")
       .count()
       .where({skater_id})
       .where('element_id','LIKE',`${checkmark_id}%`)
@@ -19,15 +19,15 @@ const ElementLogServices = {
   async insertLog(knex, log) {
     const rows = await knex
       .insert(log)
-      .into("canskate_element_log")
+      .into("skater_element_log")
       .returning("*");
     return rows[0];
   },
   updateLog(knex, id, log) {
-    return knex("canskate_element_log").update(log).where({ id });
+    return knex("skater_element_log").update(log).where({ id });
   },
   deleteLog(knex, id) {
-    return knex("canskate_element_log").where({ id }).delete();
+    return knex("skater_element_log").where({ id }).delete();
   },
 };
 

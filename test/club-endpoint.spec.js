@@ -1,39 +1,55 @@
-const {expect} = require('chai')
-const supertest = require('supertest')
-const knex = require('knex')
-const {makeClubsArray} = require("./club.fixtures")
-const {makeGroupArray} = require('./group.fixtures')
-const app = require('../src/app')
+const { expect } = require("chai");
+const supertest = require("supertest");
+const knex = require("knex");
+const { makeClubsArray } = require("./club.fixtures");
+const { makeSessionsArray } = require("./session.fixtures");
+const { makeGroupArray } = require("./group.fixtures");
+const app = require("../src/app");
 
 const clubs = makeClubsArray();
-const groups = makeGroupArray(10);
+const sessions = makeSessionsArray();
+const groups = makeGroupArray();
 
-describe.only('club endpoints',()=>{
+describe("club endpoints", () => {
   let db;
 
-  async function cleanup(){
-    await db.raw('TRUNCATE canskate_groups, canskate_sessions, canskate_clubs, RESTART IDENTITY CASCADE')
+  function cleanup() {
+    return db.raw("TRUNCATE groups, sessions, clubs RESTART IDENTITY CASCADE");
   }
 
-  async function populate(){
-    
+  function populate() {
+      db.into("clubs").insert(clubs)
+      db.into("sessions").insert(sessions)
+      db.into("groups").insert(groups)
   }
 
-  before('make knex instance', ()=>{
+  before("make knex instance", () => {
     db = knex({
-      client: 'pg',
+      client: "pg",
       connection: process.env.TEST_DATABASE_URL,
-    })
-    app.set("db",db);
-  })
+    });
+    app.set("db", db);
+  });
 
-  after('disconnect from db', ()=>{
+  after("disconnect from db", () => {
     db.destroy();
-  })
+  });
 
-  describe('GET /api/club', ()=>{
-    context('given the database is empty',()=>{
+  beforeEach("populate database", populate);
+  afterEach("truncate tables", cleanup);
 
-    })
-  })
-})
+  describe("GET /api/club", () => {
+    context("given the database is empty", () => {
+      it("responds with status 200 and an empty array",async () => {
+        const { body } = await supertest(app).get('/api/club').expect(200);
+        expect(body).to.eql([]);
+      });
+    });
+
+    context("given the database is populated", () => {
+      it("responds with 200 and the club object", async()=>{
+
+      })
+    });
+  });
+});
