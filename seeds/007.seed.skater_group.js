@@ -16,7 +16,6 @@ try {
           .where("sessions.id", session_id)
           .select("groups.id");
 
-        console.log(group_ids);
         if (group_ids.length) {
           const group_id =
             group_ids[Math.floor(group_ids.length * Math.random())].id;

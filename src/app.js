@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const { NODE_ENV,} = require("./config");
+const { NODE_ENV, CLIENT_ORIGIN} = require("./config");
 const logger = require("./logger");
 const app = express();
 const skaterRouter = require('./skater/skater-routes');
@@ -21,7 +21,9 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 app.use(express.json())
 app.use(morgan(morganOption));
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: CLIENT_ORIGIN
+}));
 
 // limit request to frontend.
 
@@ -49,12 +51,12 @@ app.use('/api/skater-group',skaterGroupRouter)
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   let response;
-  // if (NODE_ENV === "production") {
-  //   response = { error: { message: "server error" } };
-  // } else {
-  //   logger.log(error);
+  if (NODE_ENV === "production") {
+    response = { error: { message: "server error" } };
+  } else {
+    logger.log(error);
     response = { message: error.message, error };
-  // }
+  }
   res.status(500).json(response);
 });
 

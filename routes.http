@@ -109,3 +109,13 @@ GET http://localhost:8000/api/club/1 HTTP/1.1
 ###
 
 GET https://hidden-garden-48711.herokuapp.com/api/skater HTTP/1.1
+
+###
+POST https://hidden-garden-48711.herokuapp.com/api/skater HTTP/1.1
+Content-Type: application/json
+
+{
+  "fullname": "Camille Ruest",
+  "gender": "Female",
+  "birthdate": "1993-11-23"
+}

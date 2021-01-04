@@ -10,7 +10,6 @@ try {
     const skaterClubEntries = await db.select("*").from("skater_club");
     await Promise.all(
       skaterClubEntries.map(async ({ skater_id, club_id }) => {
-        console.log({ skater_id, club_id });
         const session_ids = await db
           .from("clubs")
           .join("sessions", { "sessions.club_id": "clubs.id" })
