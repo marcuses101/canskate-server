@@ -1,11 +1,11 @@
 const express = require("express");
-const GroupServices = require("./group-services");
+const groupServices = require("./group-services");
 const GroupRouter = express.Router();
 
 GroupRouter.route("/")
   .get(async (req, res, next) => {
     try {
-      const responseGroups = await GroupServices.getAllGroups(
+      const responseGroups = await groupServices.getAllGroups(
         req.app.get("db")
       );
       res.json(responseGroups);
@@ -40,7 +40,7 @@ GroupRouter.route("/")
             )}`,
           },
         });
-      const responseGroup = await GroupServices.insertGroup(
+      const responseGroup = await groupServices.insertGroup(
         req.app.get("db"),
         requestGroup
       );
@@ -54,7 +54,7 @@ GroupRouter.route("/:id")
   .all(async (req, res, next) => {
     try {
       const { id } = req.params;
-      const group = await GroupServices.getGroupById(req.app.get("db"), id);
+      const group = await groupServices.getGroupById(req.app.get("db"), id);
       if (!group) {
         return res
           .status(400)
@@ -91,7 +91,7 @@ GroupRouter.route("/:id")
               ", "
             )}`
           );
-      await GroupServices.updateGroup(req.app.get("db"), req.group.id, {
+      await groupServices.updateGroup(req.app.get("db"), req.group.id, {
         group_color,
       });
       res.send(`Group with id ${req.group.id} updated`)
@@ -101,7 +101,7 @@ GroupRouter.route("/:id")
   })
   .delete(async (req, res, next) => {
     try {
-      await GroupServices.deleteGroup(req.app.get('db'),req.group.id);
+      await groupServices.deleteGroup(req.app.get('db'),req.group.id);
       res.send(`Group with id ${req.group.id} deleted`)
     } catch (error) {
       next(error)

@@ -1,15 +1,15 @@
 const { expect } = require("chai");
 const supertest = require("supertest");
 const knex = require("knex");
-const GroupServices = require("../src/group/group-services");
-const { makeGroupArray } = require("./group.fixtures");
+const groupServices = require("../src/group/group-services");
+const { makeGroupArray } = require("./fixtures/group.fixtures");
 const app = require("../src/app");
 
 describe("/api/group endpoint", () => {
   let db = {};
   function cleanup() {
     return db.raw(
-      "TRUNCATE canskate_sessions, canskate_groups RESTART IDENTITY CASCADE"
+      "TRUNCATE sessions, groups RESTART IDENTITY CASCADE"
     );
   }
   before("make knex instance", () => {
@@ -19,7 +19,7 @@ describe("/api/group endpoint", () => {
     });
     return app.set("db", db);
   });
-  before("populate canskate_sessions table", async () => {
+  before("populate sessions table", async () => {
 
 
   });
@@ -31,8 +31,8 @@ describe("/api/group endpoint", () => {
   describe("GET /", () => {
     const groups = makeGroupArray(10);
     context("given the database contains groups", () => {
-      beforeEach("populate canskate_groups", async () => {
-        await db.insert(groups).into("canskate_groups");
+      beforeEach("populate groups", async () => {
+        await db.insert(groups).into("groups");
       });
       afterEach("clear tables", cleanup);
 

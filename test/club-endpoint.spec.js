@@ -1,9 +1,9 @@
 const { expect } = require("chai");
 const supertest = require("supertest");
 const knex = require("knex");
-const { makeClubsArray } = require("./club.fixtures");
-const { makeSessionsArray } = require("./session.fixtures");
-const { makeGroupArray } = require("./group.fixtures");
+const { makeClubsArray } = require("./fixtures/club.fixtures");
+const { makeSessionsArray } = require("./fixtures/session.fixtures");
+const { makeGroupArray } = require("./fixtures/group.fixtures");
 const app = require("../src/app");
 
 const clubs = makeClubsArray();

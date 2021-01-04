@@ -1,4 +1,4 @@
-const GroupServices = {
+const groupServices = {
   getAllGroups(knex){
     return knex.select("*").from("groups");
   },
@@ -25,4 +25,4 @@ const GroupServices = {
   }
 }
 
-module.exports = GroupServices;
+module.exports = groupServices;

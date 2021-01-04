@@ -11,8 +11,10 @@ const ElementRouter = require('./element/element-routes');
 const ElementLogRouter = require('./element-log/element-log-routes');
 const GroupRouter = require('./group/group-routes');
 const SessionRouter = require("./session/session-routes");
-const ClubRouter = require('./club/club-routes')
-
+const ClubRouter = require('./club/club-routes');
+const skaterClubRouter = require('./skater-club/skater-club-routes');
+const skaterSessionRouter = require('./skater-session/skater-session-routes');
+const skaterGroupRouter = require('./skater-group/skater-group-routes')
 const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 
 
@@ -40,6 +42,9 @@ app.use('/api/session',SessionRouter);
 app.use('/api/club',ClubRouter)
 app.use('/api/element',ElementRouter);
 app.use('/api/log', ElementLogRouter);
+app.use('/api/skater-club',skaterClubRouter);
+app.use('/api/skater-session',skaterSessionRouter);
+app.use('/api/skater-group',skaterGroupRouter)
 
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {

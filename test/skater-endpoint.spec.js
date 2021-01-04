@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const supertest = require("supertest");
 const knex = require("knex");
-const { makeSkatersArray, generateSkater } = require("./skater.fixtures");
+const { makeSkatersArray, generateSkater } = require("./fixtures/skater.fixtures");
 const app = require("../src/app");
 
 describe.only("/api/skater endpoints", () => {

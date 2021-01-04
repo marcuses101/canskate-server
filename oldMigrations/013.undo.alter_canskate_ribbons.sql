@@ -1,2 +1,0 @@
-ALTER TABLE canskate_ribbons
-DROP CONSTRAINT canskate_ribbons_stage_fkey;

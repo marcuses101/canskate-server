@@ -1,23 +1,23 @@
 const ElementServices = {
   getElements(knex) {
-    return knex("canskate_elements")
+    return knex("elements")
       .join(
-        "canskate_checkmarks",
-        "canskate_elements.checkmark_id",
-        "canskate_checkmarks.id"
+        "checkmarks",
+        "elements.checkmark_id",
+        "checkmarks.id"
       )
       .join(
-        "canskate_ribbons",
-        "canskate_ribbons.id",
-        "canskate_checkmarks.ribbon_id"
+        "ribbons",
+        "ribbons.id",
+        "checkmarks.ribbon_id"
       )
       .select(
-        "canskate_elements.description as element",
-        "canskate_elements.id as element_id",
-        "canskate_checkmarks.id as checkmark_id",
-        "canskate_ribbons.id as ribbon_id",
-        "canskate_ribbons.fundamental_area as fundamental",
-        "canskate_ribbons.stage as badge_id",
+        "elements.description as element",
+        "elements.id as element_id",
+        "checkmarks.id as checkmark_id",
+        "ribbons.id as ribbon_id",
+        "ribbons.fundamental_area as fundamental",
+        "ribbons.stage as badge_id",
       );
   },
 };
