@@ -105,3 +105,7 @@ GET http://localhost:8000/api/log HTTP/1.1
 
 ###
 GET http://localhost:8000/api/club/1 HTTP/1.1
+
+###
+
+GET https://hidden-garden-48711.herokuapp.com/api/skater HTTP/1.1
