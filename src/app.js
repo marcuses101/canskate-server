@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
+
+
 // Routes
 app.use('/api/skater',skaterRouter);
 app.use('/api/group',GroupRouter);
@@ -51,10 +53,10 @@ app.use('/api/skater-group',skaterGroupRouter)
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   let response;
+  logger.log(error);
   if (NODE_ENV === "production") {
     response = { error: { message: "server error" } };
   } else {
-    logger.log(error);
     response = { message: error.message, error };
   }
   res.status(500).json(response);

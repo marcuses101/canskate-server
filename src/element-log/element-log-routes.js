@@ -42,9 +42,9 @@ ElementLogRouter.route("/")
       );
       const responseObject = {
         element_log: responseElementLog,
-        checkmark_log: null,
-        ribbon_log: null,
-        badge_log: null,
+        checkmark_log: {},
+        ribbon_log: {},
+        badge_log: {},
       };
       // check if new checkmark log is required
       const [{ total_elements }, completedElements] = await Promise.all([

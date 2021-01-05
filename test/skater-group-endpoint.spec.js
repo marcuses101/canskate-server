@@ -1,5 +1,3 @@
-const { test } = require("mocha");
-
 const { expect } = require("chai");
 const supertest = require("supertest");
 const knex = require("knex");

@@ -1,16 +1,38 @@
 const { expect } = require("chai");
+const dayjs = require("dayjs");
 const supertest = require("supertest");
 const knex = require("knex");
 const app = require("../src/app");
+const { makeSkatersArray } = require("./fixtures/skater.fixtures");
+const {
+  makeSkaterElementLogArray,
+  makeSkaterCheckmarkLogArray,
+  makeSkaterRibbonLogArray,
+  makeSkaterBadgeLogArray,
+} = require("./fixtures/log.fixtures");
+
+const skaters = makeSkatersArray();
+const skaterElementLogs = makeSkaterElementLogArray();
+const skaterCheckmarkLogs = makeSkaterCheckmarkLogArray();
+const skaterRibbonLogs = makeSkaterRibbonLogArray();
+const skaterBadgeLogs = makeSkaterBadgeLogArray();
 
 describe("log endpoints", () => {
   let db = {};
   function cleanup() {
     return db.raw(
-      "TRUNCATE skater_badge_log, skater_ribbon_log, skater_checkmark_log, skater_element_log RESTART IDENTITY CASCADE"
+      "TRUNCATE skaters, skater_element_log, skater_checkmark_log, skater_ribbon_log, skater_badge_log RESTART IDENTITY CASCADE"
     );
   }
-  async function populate() {}
+  async function populate() {
+    await db.into("skaters").insert(skaters);
+    await Promise.all([
+      db.into("skater_element_log").insert(skaterElementLogs),
+      db.into("skater_checkmark_log").insert(skaterCheckmarkLogs),
+      db.into("skater_ribbon_log").insert(skaterRibbonLogs),
+      db.into("skater_badge_log").insert(skaterBadgeLogs),
+    ]);
+  }
 
   before("make knex instance", () => {
     db = knex({
@@ -20,11 +42,104 @@ describe("log endpoints", () => {
     return app.set("db", db);
   });
 
+  after(() => {
+    db.destroy();
+  });
   beforeEach(cleanup);
+  afterEach(cleanup);
 
-  describe("GET /api/log", () => {});
-  describe("POST /api/log", () => {});
-  describe("GET /api/log/:id", () => {});
-  describe("PATCH /api/log/:id", () => {});
-  describe("DELETE /api/log/:id", () => {});
+  describe("POST /api/logs", () => {
+    context("skaters populated, skater_*_log is empty", () => {
+      beforeEach(async () => {
+        await db.into("skaters").insert(skaters);
+      });
+      afterEach(cleanup);
+      it("responds with status 200 and a object of logs ", async () => {
+        const newLog = { skater_id: 2, element_id: "1B11" };
+        const expectedResponse = {
+          element_log: {
+            ...newLog,
+            id: 1,
+            date_completed: dayjs().format("YYYY-MM-DD"),
+          },
+          checkmark_log: {
+            checkmark_id: "1B1",
+            skater_id: 2,
+            date_completed: dayjs().format("YYYY-MM-DD"),
+            id: 1,
+          },
+          ribbon_log: {},
+          badge_log: {},
+        };
+        const { body } = await supertest(app).post("/api/log").send(newLog);
+        body.element_log.date_completed = dayjs(
+          body.element_log.date_completed
+        ).format("YYYY-MM-DD");
+        body.checkmark_log.date_completed = dayjs(
+          body.checkmark_log.date_completed
+        ).format("YYYY-MM-DD");
+        expect(body).to.eql(expectedResponse);
+      });
+    });
+  });
+
+  describe.only("DELETE /api/logs", () => {
+    context("database is populated", () => {
+      beforeEach(populate);
+      afterEach(cleanup);
+
+      it("responds with status 200 and removes the appropriate logs across log tables", async () => {
+        const id = 1;
+        const expectedElementLogs = skaterElementLogs.filter(
+          ({ element_id }) => element_id !== "1B11"
+        );
+        const expectedCheckmarkLogs = skaterCheckmarkLogs.filter(
+          ({ checkmark_id }) => checkmark_id !== "1B1"
+        );
+        const expectedRibbonLogs = skaterRibbonLogs.filter(
+          ({ ribbon_id }) => ribbon_id !== "1B"
+        );
+        const expectedBadgeLogs = skaterBadgeLogs.filter(
+          ({ badge_id }) => badge_id !== "1"
+        );
+        await supertest(app).delete(`/api/log/${id}`).expect(200);
+        const actualElementLogs = (
+          await db
+            .select("skater_id", "element_id", "date_completed")
+            .from("skater_element_log")
+        ).map((log) => ({
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+        }));
+        const actualCheckmarkLogs = (
+          await db
+            .select("skater_id", "checkmark_id", "date_completed")
+            .from("skater_checkmark_log")
+        ).map((log) => ({
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+        }));
+        const actualRibbonLogs = (
+          await db
+            .select("skater_id", "ribbon_id", "date_completed")
+            .from("skater_ribbon_log")
+        ).map((log) => ({
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+        }));
+        const actualBadgeLogs = (
+          await db
+            .select("skater_id", "badge_id", "date_completed")
+            .from("skater_badge_log")
+        ).map((log) => ({
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+        }));
+        expect(actualElementLogs).to.eql(expectedElementLogs);
+        expect(actualCheckmarkLogs).to.eql(expectedCheckmarkLogs);
+        expect(actualRibbonLogs).to.eql(expectedRibbonLogs);
+        expect(actualBadgeLogs).to.eql(expectedBadgeLogs);
+      });
+    });
+  });
 });
