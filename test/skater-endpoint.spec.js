@@ -4,7 +4,7 @@ const knex = require("knex");
 const { makeSkatersArray, generateSkater } = require("./fixtures/skater.fixtures");
 const app = require("../src/app");
 
-describe.only("/api/skater endpoints", () => {
+describe("/api/skater endpoints", () => {
   let db = {};
 
   const skaters = makeSkatersArray();

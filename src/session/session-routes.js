@@ -14,8 +14,8 @@ SessionRouter.route("/")
   })
   .post(async (req, res, next) => {
     try {
-      const { day, start_time, duration } = req.body;
-      const requestSession = { day, start_time, duration };
+      const { day, start_time, duration, club_id } = req.body;
+      const requestSession = { day, start_time, duration, club_id };
       for (const [key, value] of Object.entries(requestSession)) {
         if (!value)
           return res

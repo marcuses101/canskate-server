@@ -1,18 +1,25 @@
-require('dotenv').config();
-const {makeSessionsArray} = require('../test/session.fixtures')
-const knex = require('knex');
+require("dotenv").config();
+const { makeSessionsArray } = require("../test/fixtures/session.fixtures");
+const knex = require("knex");
 const db = knex({
   client: "pg",
-  connection: process.env.DATABASE_URL
+  connection: process.env.DATABASE_URL,
 });
 
-const clubs = makeSessionsArray();
+//strip ids;
+const clubs = makeSessionsArray().map(
+  ({ day, duration, start_time, club_id }) => ({
+    day,
+    duration,
+    start_time,
+    club_id,
+  })
+);
 
-
-(async()=>{
-  await db.insert(clubs).into('sessions')
+(async () => {
+  await db.insert(clubs).into("sessions");
   process.exit();
-})().catch(e=>{
-  console.log(e)
+})().catch((e) => {
+  console.log(e);
   process.exit();
-})
+});

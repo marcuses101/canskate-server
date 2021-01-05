@@ -16,14 +16,25 @@ function serializeClub(club) {
   return { ...club, name: xss(club.name) };
 }
 
-ClubRouter.route("/").get(async (req, res, next) => {
+ClubRouter.route("/")
+.get(async (req, res, next) => {
   try {
     const clubs = await clubServices.getClubs(req.app.get("db"));
     res.json(clubs);
   } catch (error) {
     next(error);
   }
-});
+})
+.post(async(req,res,next)=>{
+  try {
+    const {name} = req.body;
+    if (!name) return res.status(400).json({error:{message:'name is required'}});
+    const responseClub = await clubServices.addClub(req.app.get('db'),{name})
+    res.status(201).json(responseClub)
+  } catch (error) {
+    next(error)
+  }
+})
 
 ClubRouter.route("/:id")
   .all(async (req, res, next) => {

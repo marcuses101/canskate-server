@@ -11,10 +11,10 @@ const skaterClubServices = {
         .insert({ skater_id, club_id })
         .into("skater_club")
         .returning("*")
-    )[0 ];
+    )[0];
   },
-  deleteEntry(knex, id) {
-    return knex('skater_club').where({id}).delete();
+  deleteEntry(knex, skater_id, club_id) {
+    return knex("skater_club").where({ skater_id, club_id }).delete();
   },
 };
 

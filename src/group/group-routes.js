@@ -94,7 +94,7 @@ GroupRouter.route("/:id")
       await groupServices.updateGroup(req.app.get("db"), req.group.id, {
         group_color,
       });
-      res.send(`Group with id ${req.group.id} updated`)
+      res.status(200).send(`Group with id ${req.group.id} updated`)
     } catch (error) {
       next(error);
     }
