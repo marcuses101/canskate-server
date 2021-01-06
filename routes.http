@@ -146,3 +146,10 @@ Content-Type: application/json
   "gender": "Female",
   "birthdate": "1993-11-23"
 }
+
+###
+
+POST http://localhost:8000/api/club HTTP/1.1
+Content-Type: application/json
+
+{"name": "Brand New Club!"}

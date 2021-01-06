@@ -1,10 +1,10 @@
 require('dotenv').config();
 const faker = require('faker')
-const knex = require('knex');
-const db = knex({
-  client: "pg",
-  connection: process.env.DATABASE_URL
-});
+// const knex = require('knex');
+// const db = knex({
+//   client: "pg",
+//   connection: process.env.DATABASE_URL
+// });
 
 function genderGenerator(){
   const genders = ['Male','Female']
@@ -22,10 +22,16 @@ function generateSkater(){
 
 const skaters = [...Array(100)].map(()=>generateSkater());
 
-(async()=>{
+async function seedSkaters(db){
   await db.insert(skaters).into('skaters')
-  process.exit();
-})().catch(e=>{
-  console.log(e)
-  process.exit();
-})
+}
+
+// (async()=>{
+//   await db.insert(skaters).into('skaters')
+//   process.exit();
+// })().catch(e=>{
+//   console.log(e)
+//   process.exit();
+// })
+
+module.exports = {seedSkaters}

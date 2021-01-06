@@ -2,10 +2,9 @@ const RibbonLogServices = {
   getLogs(knex) {
     return knex.select("*").from("skater_ribbon_log");
   },
-  getLogsBySkaterId(knex,skater_id){
-    return knex.select('*').from('skater_ribbon_log').where({skater_id})
-  }
-  ,
+  getLogsBySkaterId(knex, skater_id) {
+    return knex.select("*").from("skater_ribbon_log").where({ skater_id });
+  },
   async insertLog(knex, log) {
     const rows = await knex
       .insert(log)
@@ -20,6 +19,9 @@ const RibbonLogServices = {
       .where("ribbon_id", "LIKE", `${badge_id}%`)
       .first();
     return parseInt(count);
+  },
+  async updateLog(knex, id, log) {
+    return (await knex('skater_ribbon_log').where({id}).update(log).returning('*'))[0]
   },
   deleteLog(knex, id) {
     return knex("skater_ribbon_log").where({ id }).delete();

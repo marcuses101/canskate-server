@@ -13,10 +13,12 @@ ElementLogRouter.route("/")
   .get(async (req, res, next) => {
     try {
       const elementLogs = await ElementLogServices.getLogs(req.app.get("db"));
-      const checkmarkLogs = await CheckmarkLogServices.getLogs(req.app.get('db'));
-      const ribbonLogs = await RibbonLogServices.getLogs(req.app.get('db'));
-      const badgeLogs = await BadgeLogServices.getLogs(req.app.get('db'))
-      res.json({elementLogs,checkmarkLogs,ribbonLogs,badgeLogs});
+      const checkmarkLogs = await CheckmarkLogServices.getLogs(
+        req.app.get("db")
+      );
+      const ribbonLogs = await RibbonLogServices.getLogs(req.app.get("db"));
+      const badgeLogs = await BadgeLogServices.getLogs(req.app.get("db"));
+      res.json({ elementLogs, checkmarkLogs, ribbonLogs, badgeLogs });
     } catch (error) {
       next(error);
     }
@@ -94,6 +96,44 @@ ElementLogRouter.route("/")
         date_completed,
       });
       res.json(responseObject);
+    } catch (error) {
+      next(error);
+    }
+  })
+  .patch(async (req, res, next) => {
+    try {
+      const { log_type, id, date_distributed } = req.body;
+      if (log_type !== "ribbon" && log_type !== "badge") {
+        return res.status(400).json({
+          error: {
+            message: "'log_type' must be either 'ribbon' or 'badge'",
+          },
+        });
+      }
+      if (!id) {
+        return res.status(400).json({ error: { message: "'id' is required" } });
+      }
+      if (!date_distributed) {
+        return res
+          .status(400)
+          .json({ error: { message: "'date_distributed' is required" } });
+      }
+      if (log_type === "ribbon") {
+        const responseLog = await RibbonLogServices.updateLog(
+          req.app.get("db"),
+          id,
+          { date_distributed }
+        );
+        return res.status(200).json(responseLog);
+      }
+      if (log_type === "badge") {
+        const responseLog = await BadgeLogServices.updateLog(
+          req.app.get("db"),
+          id,
+          { date_distributed }
+        );
+        return res.status(200).json(responseLog);
+      }
     } catch (error) {
       next(error);
     }
@@ -182,7 +222,8 @@ ElementLogRouter.route("/:id")
       responseObj.deletedLogs.ribbon_log_id = deletedRibbonLogId;
 
       const completedRibbons = await RibbonLogServices.countCompletedRibbonsByBadge(
-        db,skater_id,
+        db,
+        skater_id,
         badge_id
       );
       if (completedRibbons != 2) return res.json(responseObj);
@@ -196,7 +237,6 @@ ElementLogRouter.route("/:id")
       );
       responseObj.deletedLogs.badge_log_id = deletedBadgeLogId;
       res.json(responseObj);
-
     } catch (error) {
       next(error);
     }

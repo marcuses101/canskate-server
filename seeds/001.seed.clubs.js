@@ -1,18 +1,17 @@
-require('dotenv').config();
-const {makeClubsArray} = require('../test/club.fixtures')
-const knex = require('knex');
-const db = knex({
-  client: "pg",
-  connection: process.env.DATABASE_URL
-});
+require("dotenv").config();
+const { makeClubsArray } = require("../test/fixtures/club.fixtures");
+// const knex = require("knex");
+// const db = knex({
+//   client: "pg",
+//   connection: process.env.DATABASE_URL,
+// });
 
-const clubs = makeClubsArray();
+const clubs = makeClubsArray().map(({ name }) => ({ name }));
+async function seedClub(db){
+    await db.insert(clubs).into('clubs')
+}
 
 
-(async()=>{
-  await db.insert(clubs).into('clubs')
-  process.exit();
-})().catch(e=>{
-  console.log(e)
-  process.exit();
-})
+
+module.exports = {seedClub};
+

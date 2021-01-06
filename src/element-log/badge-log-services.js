@@ -15,6 +15,9 @@ const BadgeLogServices = {
   deleteLog(knex, id) {
     return knex("skater_badge_log").where({ id }).delete();
   },
+  async updateLog(knex, id, log) {
+    return (await knex('skater_badge_log').where({id}).update(log).returning('*'))[0]
+  },
   async deleteLogBySkaterBadge(knex, skater_id, badge_id) {
     const rows = await knex("skater_badge_log")
       .where({ skater_id, badge_id })

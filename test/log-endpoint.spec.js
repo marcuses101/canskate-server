@@ -83,7 +83,59 @@ describe("log endpoints", () => {
     });
   });
 
-  describe.only("DELETE /api/logs", () => {
+  describe.only("PATCH /api/logs", () => {
+    context("database is populated", () => {
+      beforeEach(populate);
+      afterEach(cleanup);
+
+      it("updates the ribbon log date_distributed", async () => {
+        const updateObject = {
+          log_type: "ribbon",
+          id: 1,
+          date_distributed: new Date(),
+        };
+        const expectedLog = {
+          ...skaterRibbonLogs.find(({ ribbon_id }) => ribbon_id === "1B"),
+          date_distributed: dayjs().format("YYYY-MM-DD"),
+          id: 1,
+        };
+        const { body } = await supertest(app)
+          .patch("/api/log")
+          .send(updateObject)
+          .expect(200);
+        body.date_distributed = dayjs(body.date_distributed).format(
+          "YYYY-MM-DD"
+        );
+        body.date_completed = dayjs(body.date_completed).format("YYYY-MM-DD");
+        expect(body).to.eql(expectedLog);
+      });
+
+      it("updates the badge log date_distributed", async () => {
+        const updateObject = {
+          log_type: "badge",
+          id: 1,
+          date_distributed: new Date(),
+        };
+        const expectedLog = {
+          ...skaterBadgeLogs.find(({ badge_id }) => badge_id === "1"),
+          date_distributed: dayjs().format("YYYY-MM-DD"),
+          id:1
+        };
+
+        const { body } = await supertest(app)
+          .patch("/api/log")
+          .send(updateObject)
+          .expect(200);
+        body.date_distributed = dayjs(body.date_distributed).format(
+          "YYYY-MM-DD"
+        );
+        body.date_completed = dayjs(body.date_completed).format("YYYY-MM-DD");
+        expect(body).to.eql(expectedLog);
+      });
+    });
+  });
+
+  describe("DELETE /api/logs", () => {
     context("database is populated", () => {
       beforeEach(populate);
       afterEach(cleanup);
