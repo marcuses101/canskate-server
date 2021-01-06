@@ -83,7 +83,8 @@ describe("log endpoints", () => {
     });
   });
 
-  describe.only("PATCH /api/logs", () => {
+  describe
+("PATCH /api/logs", () => {
     context("database is populated", () => {
       beforeEach(populate);
       afterEach(cleanup);
