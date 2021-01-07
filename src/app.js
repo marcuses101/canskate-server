@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const { NODE_ENV, CLIENT_ORIGIN, TOKEN_SECRET} = require("./config");
 const logger = require("./logger");
 const app = express();
+const UserRouter = require('./user/user-routes')
 const skaterRouter = require('./skater/skater-routes');
 const ElementRouter = require('./element/element-routes');
 const ElementLogRouter = require('./element-log/element-log-routes');
@@ -41,6 +42,7 @@ app.get("/", (req, res) => {
 
 
 // Routes
+app.use('/api/user', UserRouter)
 app.use('/api/skater',skaterRouter);
 app.use('/api/group',GroupRouter);
 app.use('/api/session',SessionRouter);
