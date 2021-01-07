@@ -72,6 +72,7 @@ describe("log endpoints", () => {
           badge_log: {},
         };
         const { body } = await supertest(app).post("/api/log").send(newLog);
+        console.log(body.element_log.date_completed);
         body.element_log.date_completed = dayjs(
           body.element_log.date_completed
         ).format("YYYY-MM-DD");
@@ -83,8 +84,7 @@ describe("log endpoints", () => {
     });
   });
 
-  describe
-("PATCH /api/logs", () => {
+  describe("PATCH /api/logs", () => {
     context("database is populated", () => {
       beforeEach(populate);
       afterEach(cleanup);
@@ -107,7 +107,9 @@ describe("log endpoints", () => {
         body.date_distributed = dayjs(body.date_distributed).format(
           "YYYY-MM-DD"
         );
-        body.date_completed = dayjs(body.date_completed).format("YYYY-MM-DD");
+        body.date_completed = dayjs(body.date_completed)
+          .locale()
+          .format("YYYY-MM-DD");
         expect(body).to.eql(expectedLog);
       });
 
@@ -120,7 +122,7 @@ describe("log endpoints", () => {
         const expectedLog = {
           ...skaterBadgeLogs.find(({ badge_id }) => badge_id === "1"),
           date_distributed: dayjs().format("YYYY-MM-DD"),
-          id:1
+          id: 1,
         };
 
         const { body } = await supertest(app)

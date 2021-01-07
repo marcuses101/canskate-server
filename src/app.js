@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const { NODE_ENV, CLIENT_ORIGIN} = require("./config");
+const { NODE_ENV, CLIENT_ORIGIN, TOKEN_SECRET} = require("./config");
 const logger = require("./logger");
 const app = express();
 const skaterRouter = require('./skater/skater-routes');
@@ -16,7 +16,6 @@ const skaterClubRouter = require('./skater-club/skater-club-routes');
 const skaterSessionRouter = require('./skater-session/skater-session-routes');
 const skaterGroupRouter = require('./skater-group/skater-group-routes')
 const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
-
 
 app.use(express.json())
 app.use(morgan(morganOption));
@@ -37,6 +36,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
+
 
 
 
