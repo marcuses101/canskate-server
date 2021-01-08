@@ -1,7 +1,7 @@
 # /skater routes
 
 GET http://localhost:8000/api/skater/ HTTP/1.1
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmN1c2VzMTAxIiwiaWF0IjoxNjEwMDM5NjE0fQ.v-98WyQJsvzfWAjzHNOa1HJSt12q6AHp69ZjkYKzcRs
 ###
 
 POST http://localhost:8000/api/session HTTP/1.1
@@ -86,7 +86,8 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8000/skater/500 HTTP/1.1
+GET http://localhost:8000/api/skater/30 HTTP/1.1
+
 
 ###
 PATCH http://localhost:8000/skater/202 HTTP/1.1
@@ -122,7 +123,8 @@ GET http://localhost:8000/api/element HTTP/1.1
 GET http://localhost:8000/api/log HTTP/1.1
 
 ###
-GET http://localhost:8000/api/club/1 HTTP/1.1
+GET http://localhost:8000/api/club/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmN1c2VzMTAxIiwiaWF0IjoxNjEwMDM5NjE0fQ.v-98WyQJsvzfWAjzHNOa1HJSt12q6AHp69ZjkYKzcRs
 
 ###
 

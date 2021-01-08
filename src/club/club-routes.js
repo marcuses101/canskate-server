@@ -4,12 +4,14 @@ const express = require("express");
 const xss = require("xss");
 const groupServices = require("../group/group-services");
 const skaterServices = require("../skater/skater-services");
+const userClubServices = require('../user-club/user-club-services')
 const skaterSessionServices = require("../skater-session/skater-session-services");
 const skaterGroupServices = require("../skater-group/skater-group-services");
 const ElementLogServices = require("../element-log/element-log-services");
 const CheckmarkLogServices = require("../element-log/checkmark-log-services");
 const RibbonLogServices = require("../element-log/ribbon-log-services");
 const BadgeLogServices = require("../element-log/badge-log-services");
+const { authenticateToken } = require("../auth");
 const ClubRouter = express.Router();
 
 function serializeClub(club) {
@@ -17,9 +19,10 @@ function serializeClub(club) {
 }
 
 ClubRouter.route("/")
+.all(authenticateToken)
 .get(async (req, res, next) => {
   try {
-    const clubs = await clubServices.getClubs(req.app.get("db"));
+    const clubs = await clubServices.getClubsByUsername(req.app.get('db'), req.username);
     res.json(clubs);
   } catch (error) {
     next(error);
@@ -30,6 +33,7 @@ ClubRouter.route("/")
     const {name} = req.body;
     if (!name) return res.status(400).json({error:{message:'name is required'}});
     const responseClub = await clubServices.addClub(req.app.get('db'),{name})
+    await userClubServices.addEntry(req.app.get('db'),req.user_id,responseClub.id)
     res.status(201).json(responseClub)
   } catch (error) {
     next(error)
@@ -37,9 +41,12 @@ ClubRouter.route("/")
 })
 
 ClubRouter.route("/:id")
+  .all(authenticateToken)
   .all(async (req, res, next) => {
     try {
       const { id } = req.params;
+      const authorizedClubs = await clubServices.getClubsByUsername(req.app.get('db'),req.username)
+      if (!authorizedClubs.find(club=>club.id===parseInt(id))) return res.status(403).json({error:{message:'Unauthorized to access this club'}})
       const club = await clubServices.getClubById(req.app.get("db"), id);
       if (!club)
         return res.status(404).json({
@@ -54,7 +61,7 @@ ClubRouter.route("/:id")
   // this route is used to load all club data for use in the react application.
   .get(async (req, res, next) => {
     try {
-      const { id: club_id } = req.params;
+      const { id: club_id } = req.club;
       const [
         {name, id},
         sessions,

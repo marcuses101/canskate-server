@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const { NODE_ENV, CLIENT_ORIGIN, TOKEN_SECRET} = require("./config");
+const { NODE_ENV, CLIENT_ORIGIN} = require("./config");
 const logger = require("./logger");
 const app = express();
 const UserRouter = require('./user/user-routes')
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
 
 
 // Routes
-app.use('/api/user', UserRouter)
+app.use('/api/user', UserRouter);
 app.use('/api/skater',skaterRouter);
 app.use('/api/group',GroupRouter);
 app.use('/api/session',SessionRouter);

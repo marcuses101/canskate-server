@@ -108,7 +108,6 @@ describe("log endpoints", () => {
           "YYYY-MM-DD"
         );
         body.date_completed = dayjs(body.date_completed)
-          .locale()
           .format("YYYY-MM-DD");
         expect(body).to.eql(expectedLog);
       });

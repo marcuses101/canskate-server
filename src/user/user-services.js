@@ -3,7 +3,7 @@ const userServices = {
     return (await knex.into('users').insert(user).returning('*'))[0];
   },
   async getUserByUsername(knex,username){
-    return knex.select('*').from('users').where({username});
+    return knex.select('*').from('users').where({username}).first();
   }
 }
 

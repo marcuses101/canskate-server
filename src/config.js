@@ -4,6 +4,7 @@ module.exports = {
   DATABASE_URL: process.env.DATABASE_URL,
   TEST_DATABASE_URL: process.env.TEST_DATABASE_URL,
   TOKEN_SECRET: process.env.TOKEN_SECRET,
+  REFRESH_TOKEN: process.env.REFRESH_TOKEN,
   CLIENT_ORIGIN:
     process.env.NODE_ENV == "development"
       ? "http://localhost:3000"
