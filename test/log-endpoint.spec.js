@@ -72,7 +72,6 @@ describe("log endpoints", () => {
           badge_log: {},
         };
         const { body } = await supertest(app).post("/api/log").send(newLog);
-        console.log(body.element_log.date_completed);
         body.element_log.date_completed = dayjs(
           body.element_log.date_completed
         ).format("YYYY-MM-DD");
