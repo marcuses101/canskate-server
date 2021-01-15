@@ -14,8 +14,8 @@ function makeClubsArray() {
     },
     {
       id:4,
-      name: "Marcus's Cool Club"
-    }
+      name: "Demo Club"
+    },
   ];
 }
 

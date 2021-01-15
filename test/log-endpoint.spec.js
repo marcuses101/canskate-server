@@ -94,8 +94,12 @@ describe("log endpoints", () => {
           id: 1,
           date_distributed: new Date(),
         };
+        const log = skaterRibbonLogs.find(
+          ({ ribbon_id }) => ribbon_id === "1B"
+        );
         const expectedLog = {
-          ...skaterRibbonLogs.find(({ ribbon_id }) => ribbon_id === "1B"),
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
           date_distributed: dayjs().format("YYYY-MM-DD"),
           id: 1,
         };
@@ -106,8 +110,7 @@ describe("log endpoints", () => {
         body.date_distributed = dayjs(body.date_distributed).format(
           "YYYY-MM-DD"
         );
-        body.date_completed = dayjs(body.date_completed)
-          .format("YYYY-MM-DD");
+        body.date_completed = dayjs(body.date_completed).format("YYYY-MM-DD");
         expect(body).to.eql(expectedLog);
       });
 
@@ -117,8 +120,10 @@ describe("log endpoints", () => {
           id: 1,
           date_distributed: new Date(),
         };
+        const log = skaterBadgeLogs.find(({ badge_id }) => badge_id === "1");
         const expectedLog = {
-          ...skaterBadgeLogs.find(({ badge_id }) => badge_id === "1"),
+          ...log,
+          date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
           date_distributed: dayjs().format("YYYY-MM-DD"),
           id: 1,
         };
@@ -143,18 +148,30 @@ describe("log endpoints", () => {
 
       it("responds with status 200 and removes the appropriate logs across log tables", async () => {
         const id = 1;
-        const expectedElementLogs = skaterElementLogs.filter(
-          ({ element_id }) => element_id !== "1B11"
-        );
-        const expectedCheckmarkLogs = skaterCheckmarkLogs.filter(
-          ({ checkmark_id }) => checkmark_id !== "1B1"
-        );
-        const expectedRibbonLogs = skaterRibbonLogs.filter(
-          ({ ribbon_id }) => ribbon_id !== "1B"
-        );
-        const expectedBadgeLogs = skaterBadgeLogs.filter(
-          ({ badge_id }) => badge_id !== "1"
-        );
+        const expectedElementLogs = skaterElementLogs
+          .filter(({ element_id }) => element_id !== "1B11")
+          .map((log) => ({
+            ...log,
+            date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+          }));
+        const expectedCheckmarkLogs = skaterCheckmarkLogs
+          .filter(({ checkmark_id }) => checkmark_id !== "1B1")
+          .map((log) => ({
+            ...log,
+            date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+          }));
+        const expectedRibbonLogs = skaterRibbonLogs
+          .filter(({ ribbon_id }) => ribbon_id !== "1B")
+          .map((log) => ({
+            ...log,
+            date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+          }));
+        const expectedBadgeLogs = skaterBadgeLogs
+          .filter(({ badge_id }) => badge_id !== "1")
+          .map((log) => ({
+            ...log,
+            date_completed: dayjs(log.date_completed).format("YYYY-MM-DD"),
+          }));
         await supertest(app).delete(`/api/log/${id}`).expect(200);
         const actualElementLogs = (
           await db

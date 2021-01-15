@@ -1,15 +1,16 @@
 const knex = require("knex");
+const app = require("../src/app");
 const { makeClubsArray } = require("./fixtures/club.fixtures");
 const { makeSessionsArray } = require("./fixtures/session.fixtures");
 const { makeGroupArray } = require("./fixtures/group.fixtures");
-const app = require("../src/app");
 const { makeSkatersArray } = require("./fixtures/skater.fixtures");
 const makeSkaterClubArray = require("./fixtures/skater_club.fixtures");
 const makeSkaterGroupArray = require("./fixtures/skater_group.fixtures");
 const makeSkaterSessionArray = require("./fixtures/skater_session.fixtures");
+const makeUserClubArray = require("./fixtures/user_club.fixtures");
+const makeUserArray = require("./fixtures/user.fixtures");
 const supertest = require("supertest");
 const { expect } = require("chai");
-
 const clubs = makeClubsArray();
 const sessions = makeSessionsArray();
 const groups = makeGroupArray();
@@ -17,19 +18,23 @@ const skaters = makeSkatersArray();
 const skaterClubEntries = makeSkaterClubArray();
 const skaterGroupEntries = makeSkaterGroupArray();
 const skaterSessionEntries = makeSkaterSessionArray();
+const users = makeUserArray();
+const userClubEntries = makeUserClubArray();
 
 describe("club endpoints", () => {
   let db;
 
   function cleanup() {
     return db.raw(
-      "TRUNCATE groups, sessions, clubs, skaters, skater_club, skater_session, skater_group RESTART IDENTITY CASCADE"
+      "TRUNCATE groups, sessions, clubs, skaters, skater_club, skater_session, skater_group, users, user_club RESTART IDENTITY CASCADE"
     );
   }
 
   async function populate() {
+    await db.into("users").insert(users);
     await db.into("skaters").insert(skaters);
     await db.into("clubs").insert(clubs);
+    await db.into("user_club").insert(userClubEntries);
     await db.into("sessions").insert(sessions);
     await db.into("groups").insert(groups);
     await db.into("skater_club").insert(skaterClubEntries);
@@ -49,12 +54,24 @@ describe("club endpoints", () => {
     db.destroy();
   });
   beforeEach(cleanup);
+
   afterEach("truncate tables", cleanup);
 
   describe("GET /api/club", () => {
     context("given the database is empty", () => {
+      beforeEach("populate users table", () => {
+        return db.into("users").insert(users);
+      });
+      afterEach(cleanup);
       it("responds with status 200 and an empty array", async () => {
-        const { body } = await supertest(app).get("/api/club").expect(200);
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+        const { body } = await supertest(app)
+          .get("/api/club")
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
+          .expect(200);
         expect(body).to.eql([]);
       });
     });
@@ -63,25 +80,55 @@ describe("club endpoints", () => {
       beforeEach("populate database", populate);
       afterEach("truncate tables", cleanup);
 
-      it("responds with 200 and an array of clubs", async () => {
-        const { body } = await supertest(app).get("/api/club").expect(200);
-        expect(body).to.eql(clubs);
+      it("responds with 200 and an array of clubs associated with the user", async () => {
+        const user = users[0];
+        const expectedClubs = userClubEntries
+          .filter(({ user_id }) => user_id === user.id)
+          .map(({ club_id }) => clubs.find(({ id }) => id === club_id));
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+        const { body } = await supertest(app)
+          .get("/api/club")
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
+          .expect(200);
+        expect(body).to.eql(expectedClubs);
       });
     });
   });
 
   describe("POST /api/club", () => {
     context("given the database is empty", () => {
+      beforeEach("populate users", () => {
+        return db.into("users").insert(users);
+      });
       afterEach("truncate tables", cleanup);
       it("responds with 400 if name is missing", async () => {
-        return supertest(app).post("/api/club").send({}).expect(400);
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+
+        return supertest(app)
+          .post("/api/club")
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
+          .send({})
+          .expect(400);
       });
 
       it("responds with status 201 and the club object", async () => {
         const club = { name: "Marcus' cool club" };
+
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+
         const { body } = await supertest(app)
           .post("/api/club")
           .send(club)
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
           .expect(201);
         expect(body).to.eql({ id: 1, ...club });
       });
@@ -89,10 +136,21 @@ describe("club endpoints", () => {
   });
 
   describe("GET /api/club/:id", () => {
-    context("given the database is empty", () => {
-      it("responds with status 404", async () => {
+    context("given the clubs table is empty", () => {
+      beforeEach("populate users, user_club", async () => {
+        await db.into("users").insert(users);
+      });
+      afterEach("truncate tables", cleanup);
+      it("responds with status 403", async () => {
         const id = 2;
-        await supertest(app).get(`/api/club/${id}`).expect(404);
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+        await supertest(app)
+          .get(`/api/club/${id}`)
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
+          .expect(403);
       });
     });
 
@@ -101,6 +159,11 @@ describe("club endpoints", () => {
       afterEach("clean tables", cleanup);
 
       it("responds with status 200 and an the application data for specified club", async () => {
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
+
         const id = 1;
         const expectedName = clubs.find((club) => club.id === id).name;
         const expectedSessions = sessions.filter(
@@ -141,6 +204,7 @@ describe("club endpoints", () => {
         };
         const { body } = await supertest(app)
           .get(`/api/club/${id}`)
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
           .expect(200);
         expect({
           ...body,
@@ -155,28 +219,29 @@ describe("club endpoints", () => {
 
   describe("PATCH /api/club/:id", () => {
     context("database is empty", () => {
-      it("responds with 404", async () => {
+      it("responds with 401 if access token isn't provided", async () => {
         const id = 2;
-        const { body } = await supertest(app)
+        await supertest(app)
           .patch(`/api/club/${id}`)
           .send({ name: "Bob's club" })
-          .expect(404);
-        expect(body).to.eql({
-          error: { message: `club with id ${id} not found` },
-        });
+          .expect(401, "access token null");
       });
     });
 
     context("database is populated", () => {
-
       beforeEach("populate", populate);
       afterEach("clean tables", cleanup);
       it("responds with 200 and the updated club", async () => {
+        const { body: jwt } = await supertest(app)
+          .post("/api/user/login")
+          .send({ username: "userOne", password: "password" })
+          .expect(200);
         const id = 1;
         const name = "new club name";
         const { body } = await supertest(app)
           .patch(`/api/club/${id}`)
           .send({ name })
+          .set("Authorization", `Bearer ${jwt.accessToken}`)
           .expect(200);
         expect(body).to.eql({ id: 1, name });
       });
