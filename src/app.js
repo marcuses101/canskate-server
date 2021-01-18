@@ -50,7 +50,7 @@ app.use((error, req, res, next) => {
   let response;
   logger.error(error);
   if (NODE_ENV === "production") {
-    response = { error: { message: "server error" } };
+    response = { error: { message: "server error!!!" } };
   } else {
     response = { message: error.message, error };
   }
