@@ -45,13 +45,13 @@ app.use('/api/skater-club',skaterClubRouter);
 app.use('/api/skater-session',skaterSessionRouter);
 app.use('/api/skater-group',skaterGroupRouter)
 
-logger.error('test test')
+
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   let response;
   logger.error(error);
   if (NODE_ENV === "production") {
-    response = { error: { message: "server error!!!" } };
+    response = { error: { message: "server error" } };
   } else {
     response = { message: error.message, error };
   }
