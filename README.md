@@ -7,57 +7,62 @@
 
 ### /api/user
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
-/api/user | POST | username, password | creates new user
-/api/user/login | POST | username, password | returns an access token required to access club data
+| Route           | Request | Body                   | Result                                               |
+| --------------- | ------- | ---------------------- | ---------------------------------------------------- |
+| /api/user       | POST    | username<br/> password | creates new user                                     |
+| /api/user/login | POST    | username<br/> password | returns an access token required to access club data |
 
 ### /api/club
-Route | Request | Header | Body | Result
------ | ------ | ------ | ------ | ----- |
-/api/club | GET | Authorization: token | | return clubs associated to user
-/api/club | POST | Authorization: token | name | returns created club JSON
-/api/club/:id | GET | Authorization: token | | return all data associated with the club for use in front end app.
-/api/club/:id | PATCH | Authorization: token | name | Returns updated club JSON.
+
+| Route         | Request | Header               | Body | Result                                                             |
+| ------------- | ------- | -------------------- | ---- | ------------------------------------------------------------------ |
+| /api/club     | GET     | Authorization: token |      | return clubs associated to user                                    |
+| /api/club     | POST    | Authorization: token | name | returns created club JSON                                          |
+| /api/club/:id | GET     | Authorization: token |      | return all data associated with the club for use in front end app. |
+| /api/club/:id | PATCH   | Authorization: token | name | Returns updated club JSON.                                         |
 
 ### /api/skater
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
-/api/skater | POST | fullname, gender, birthdate | returns the created skater JSON
-/api/skater | PATCH | minimum one of the following: 'fullname', 'gender', 'birthdate' | returns the updated skater JSON
-/api/skater/:id | GET | | returns the skater JSON associated with id
+| Route           | Request | Body                                                                                                                       | Result                                     |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| /api/skater     | POST    | fullname<br/> gender: <ul><li>Male</li><li>Female</li><li>Other</li></ul> birthdate                                        | returns the created skater JSON            |
+| /api/skater     | PATCH   | **minimum one of the following:** <br/>fullname<br/> gender: <ul><li>Male</li><li>Female</li><li>Other</li></ul> birthdate | returns the updated skater JSON            |
+| /api/skater/:id | GET     |                                                                                                                            | returns the skater JSON associated with id |
 
 ### /api/session
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
-/api/session | POST | day, start_time, duration, club_id | returns created session JSON
-/api/session | GET | | return session JSON with associated id
-/api/session/:id | PATCH | minimum one of: day, start_time, duration | updates session with associated id
-/api/session:id | DELETE | | deletes session with associated id
+| Route            | Request | Body                                                                                                                                                                  | Result                                 |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| /api/session     | POST    | day: <ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration<br/> club_id | returns created session JSON           |
+| /api/session     | GET     |                                                                                                                                                                       | return session JSON with associated id |
+| /api/session/:id | PATCH   | **minimum one of the following:**<br/> day:<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration                                                                                                                     | updates session with associated id     |
+| /api/session:id  | DELETE  |                                                                                                                                                                       | deletes session with associated id     |
 
 ### /api/group
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
-
+| Route          | Request | Body                                                                                                                                         | Result                                    |
+| -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| /api/group     | POST    | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul><br/> session_id | returns created group JSON                |
+| /api/group/:id | GET     |                                                                                                                                              | returns the group JSON with associated id |
+| /api/group/:id | PATCH   | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul>                 | updated group with associated id          |
+| /api/group/:id | DELETE  |                                                                                                                                              | deletes the group with associated id      |
 
 ### /api/log
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
+| Route | Request | Body | Result |
+| ----- | ------- | ---- | ------ |
 
 ### /api/skater-club
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
+| Route | Request | Body | Result |
+| ----- | ------- | ---- | ------ |
 
 ### /api/skater-session
 
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
+| Route | Request | Body | Result |
+| ----- | ------- | ---- | ------ |
 
 ### /api/skater-group
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
+
+| Route | Request | Body | Result |
+| ----- | ------- | ---- | ------ |

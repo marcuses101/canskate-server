@@ -3,16 +3,6 @@ const groupServices = require("./group-services");
 const GroupRouter = express.Router();
 
 GroupRouter.route("/")
-  .get(async (req, res, next) => {
-    try {
-      const responseGroups = await groupServices.getAllGroups(
-        req.app.get("db")
-      );
-      res.json(responseGroups);
-    } catch (error) {
-      next(error);
-    }
-  })
   .post(async (req, res, next) => {
     try {
       const { group_color, session_id } = req.body;
