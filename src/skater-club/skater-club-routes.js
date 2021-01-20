@@ -4,7 +4,6 @@ const skaterClubServices = require("./skater-club-services");
 
 skaterClubRouter
   .route("/")
-
   .post(async (req, res, next) => {
     try {
       const { skater_id, club_id } = req.body;

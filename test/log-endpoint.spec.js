@@ -17,7 +17,7 @@ const skaterCheckmarkLogs = makeSkaterCheckmarkLogArray();
 const skaterRibbonLogs = makeSkaterRibbonLogArray();
 const skaterBadgeLogs = makeSkaterBadgeLogArray();
 
-describe.only("log endpoints", () => {
+describe("log endpoints", () => {
   let db = {};
   function cleanup() {
     return db.raw(
@@ -82,7 +82,6 @@ describe.only("log endpoints", () => {
       });
     });
   });
-
 
   describe("DELETE /api/logs", () => {
     context("database is populated", () => {
