@@ -4,14 +4,6 @@ const SessionServices = require("./session-services");
 const SessionRouter = express.Router();
 
 SessionRouter.route("/")
-  .get(async (req, res, next) => {
-    try {
-      const sessions = await SessionServices.getAllSessions(req.app.get("db"));
-      res.json(sessions);
-    } catch (error) {
-      next(error);
-    }
-  })
   .post(async (req, res, next) => {
     try {
       const { day, start_time, duration, club_id } = req.body;

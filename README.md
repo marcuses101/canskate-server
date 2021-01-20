@@ -28,16 +28,16 @@ Route | Request | Body | Result
 /api/skater | PATCH | minimum one of the following: 'fullname', 'gender', 'birthdate' | returns the updated skater object
 /api/skater/:id | GET | | returns the skater object associated with id
 
+### /api/session
+
+Route | Request | Body | Result
+----- | ------ | ------ | ------ | 
 
 ### /api/group
 
 Route | Request | Body | Result
 ----- | ------ | ------ | ------ | 
 
-### /api/session
-
-Route | Request | Body | Result
------ | ------ | ------ | ------ | 
 
 ### /api/log
 

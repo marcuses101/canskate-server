@@ -33,24 +33,6 @@ describe("session endpoints", () => {
     db.destroy();
   });
 
-  describe("GET /api/session", () => {
-    context("given the database is empty", () => {
-      it("returns status 200 with an empty array", async () => {
-        const { body } = await supertest(app).get("/api/session").expect(200);
-        expect(body).to.eql([]);
-      });
-    });
-
-    context("given the database is populated", () => {
-      beforeEach(populate);
-      afterEach(cleanup);
-      it("returns 200 with an array of session objects", async () => {
-        const { body } = await supertest(app).get("/api/session").expect(200);
-        expect(body).to.eql(sessions);
-      });
-    });
-  });
-
   describe("POST /api/session", () => {
     context("session table is empty", () => {
       beforeEach("populate clubs table", () => db.into("clubs").insert(clubs));
