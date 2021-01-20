@@ -4,7 +4,7 @@ const knex = require("knex");
 const { makeSkatersArray, generateSkater } = require("./fixtures/skater.fixtures");
 const app = require("../src/app");
 
-describe("/api/skater endpoints", () => {
+describe.only("/api/skater endpoints", () => {
   let db = {};
 
   const skaters = makeSkatersArray();
@@ -32,27 +32,6 @@ describe("/api/skater endpoints", () => {
   context("Given there are folders and notes in the database", () => {
     before("Clean the tables", cleanup);
 
-    describe("/api/skater route", () => {
-      beforeEach("populate skaters table", populateSkaters);
-
-      afterEach("cleanup", cleanup);
-
-      it("GET responds with 200 and all the skaters", async () => {
-        const res = await supertest(app).get("/api/skater").expect(200);
-        const responseSkaters = res.body.map((skater) => ({
-          ...skater,
-          birthdate: new Date(skater.birthdate).toLocaleDateString(),
-        }));
-        const expectedSkaters = skaters.map((skater) => ({
-          ...skater,
-          elementLog: [],
-          checkmarkLog: [],
-          ribbonLog: [],
-          badgeLog: [],
-        }));
-        expect(responseSkaters).to.eql(expectedSkaters);
-      });
-    });
     describe("/api/skater/:id route", () => {
       beforeEach("populate skaters table", populateSkaters);
 
@@ -105,10 +84,6 @@ describe("/api/skater endpoints", () => {
         await supertest(app).get(`/api/skater/${res.body.id}`).expect(res.body);
       });
 
-      it("GET responds with 200 and an empty array", async () => {
-        const res = await supertest(app).get("/api/skater").expect(200);
-        expect(res.body).to.eql([]);
-      });
     });
   });
 });

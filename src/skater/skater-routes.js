@@ -14,36 +14,6 @@ function serializeSkater(skater) {
 
 skaterRouter
   .route("/")
-  .get(async (req, res, next) => {
-    try {
-      const skaters = await skaterServices.getAllSkaters(req.app.get("db"));
-
-      const skatersWithLogs = await Promise.all(
-        skaters.map(async (skater) => {
-          const elementLog = await ElementLogServices.getLogsBySkaterId(
-            req.app.get("db"),
-            skater.id
-          );
-          const checkmarkLog = await CheckmarkLogServices.getLogsBySkaterId(
-            req.app.get("db"),
-            skater.id
-          );
-          const ribbonLog = await RibbonLogServices.getLogsBySkaterId(
-            req.app.get("db"),
-            skater.id
-          );
-          const badgeLog = await BadgeLogServices.getLogsBySkaterId(
-            req.app.get("db"),
-            skater.id
-          );
-          return { ...skater, elementLog, checkmarkLog, ribbonLog, badgeLog };
-        })
-      );
-      res.json(skatersWithLogs.map(serializeSkater));
-    } catch (error) {
-      next(error);
-    }
-  })
   .post(async (req, res, next) => {
     try {
       const { fullname, gender, birthdate } = req.body;
