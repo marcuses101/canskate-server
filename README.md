@@ -1,9 +1,10 @@
 # CanSkate App API
 
+<a href="https://canskate.vercel.app" target="_blank">Live App</a>  
+<a href="https://github.com/marcuses101/canskate" target="_blank">Frontend Repo</a>
+
 ## Summary
 
-**[Live Site](https://canskate.vercel.app)**  
-**[Frontend Repo](https://github.com/marcuses101/canskate)**
 
 Used with the frontend CanSkate App, this REST API allows users better organize their [CanSkate](https://skatecanada.ca/learn-to-skate/canskate/) Program \(A program designed to teach beginner skaters the fundamentals of ice skating\). Manage clubs, sessions, groups, skaters. Keep track of skater evaluation and progress.
 
@@ -52,12 +53,12 @@ Used with the frontend CanSkate App, this REST API allows users better organize 
 
 ### /api/group
 
-| Route          | Request | Body                                                                                                                                         | Result                                    |
-| -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Route          | Request | Body                                                                                                                                    | Result                                    |
+| -------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | /api/group     | POST    | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul> session_id | returns created group JSON                |
-| /api/group/:id | GET     |                                                                                                                                              | returns the group JSON with associated id |
-| /api/group/:id | PATCH   | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul>                 | updated group with associated id          |
-| /api/group/:id | DELETE  |                                                                                                                                              | deletes the group with associated id      |
+| /api/group/:id | GET     |                                                                                                                                         | returns the group JSON with associated id |
+| /api/group/:id | PATCH   | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul>            | updated group with associated id          |
+| /api/group/:id | DELETE  |                                                                                                                                         | deletes the group with associated id      |
 
 ---
 
