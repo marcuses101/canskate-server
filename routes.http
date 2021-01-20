@@ -75,6 +75,16 @@ Content-Type: application/json
 }
 
 ###
+
+POST http://localhost:8000/api/skater-group HTTP/1.1
+Content-Type: application/json
+
+{
+  "skater_id": 101,
+  "group_id": 5
+}
+
+###
 PATCH http://localhost:8000/api/skater-group HTTP/1.1
 Content-Type: application/json
 

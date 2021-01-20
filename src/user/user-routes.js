@@ -6,9 +6,6 @@ const UserRouter = express.Router();
 const userServices = require("./user-services");
 
 UserRouter.route("/")
-  .get(async (req, res) => {
-    return res.send("hello users");
-  })
   .post(async (req, res, next) => {
     try {
       const { username, password } = req.body;

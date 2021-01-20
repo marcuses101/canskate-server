@@ -1,0 +1,1 @@
+{"length":259,"name":"error","severity":"ERROR","code":"23505","detail":"Key (skater_id, group_id)=(101, 5) already exists.","schema":"public","table":"skater_group","constraint":"skater_group_skater_id_group_id_key","file":"nbtinsert.c","line":"563","routine":"_bt_check_unique","level":"error"}

@@ -1,16 +1,11 @@
 const winston = require("winston");
-const { NODE_ENV } = require("./config");
-const path = require("path");
-
-const filename = path.join(__dirname, "created-logfile.log");
 
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.json(),
-  transports: [new winston.transports.File({ filename })],
+  transports: [new winston.transports.File({ filename:'info.log' })],
 });
 
-if (NODE_ENV !== "production") {
   logger.add(
     new winston.transports.Console({
       format: winston.format.combine(
@@ -19,6 +14,5 @@ if (NODE_ENV !== "production") {
       ),
     })
   );
-}
 
 module.exports = logger;
