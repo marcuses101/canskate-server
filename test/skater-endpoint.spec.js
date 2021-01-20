@@ -32,6 +32,12 @@ describe.only("/api/skater endpoints", () => {
   context("Given there are folders and notes in the database", () => {
     before("Clean the tables", cleanup);
 
+    describe("/api/skater route", () => {
+      beforeEach("populate skaters table", populateSkaters);
+
+      afterEach("cleanup", cleanup);
+
+    });
     describe("/api/skater/:id route", () => {
       beforeEach("populate skaters table", populateSkaters);
 
@@ -83,7 +89,6 @@ describe.only("/api/skater endpoints", () => {
         expect(res.body).to.have.property("id");
         await supertest(app).get(`/api/skater/${res.body.id}`).expect(res.body);
       });
-
     });
   });
 });

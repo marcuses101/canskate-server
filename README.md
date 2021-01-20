@@ -26,6 +26,7 @@ Route | Request | Body | Result
 ----- | ------ | ------ | ------ | 
 /api/skater | POST | fullname, gender, birthdate | returns the created skater object
 /api/skater | PATCH | minimum one of the following: 'fullname', 'gender', 'birthdate' | returns the updated skater object
+/api/skater/:id | GET | | returns the skater object associated with id
 
 
 ### /api/group
