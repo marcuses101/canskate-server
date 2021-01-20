@@ -31,12 +31,12 @@
 
 ### /api/session
 
-| Route            | Request | Body                                                                                                                                                                  | Result                                 |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| /api/session     | POST    | day: <ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration<br/> club_id | returns created session JSON           |
-| /api/session     | GET     |                                                                                                                                                                       | return session JSON with associated id |
-| /api/session/:id | PATCH   | **minimum one of the following:**<br/> day:<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration                                                                                                                     | updates session with associated id     |
-| /api/session:id  | DELETE  |                                                                                                                                                                       | deletes session with associated id     |
+| Route            | Request | Body                                                                                                                                                                                           | Result                                 |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| /api/session     | POST    | day: <ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration<br/> club_id                          | returns created session JSON           |
+| /api/session     | GET     |                                                                                                                                                                                                | return session JSON with associated id |
+| /api/session/:id | PATCH   | **minimum one of the following:**<br/> day:<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration | updates session with associated id     |
+| /api/session:id  | DELETE  |                                                                                                                                                                                                | deletes session with associated id     |
 
 ### /api/group
 
@@ -49,8 +49,9 @@
 
 ### /api/log
 
-| Route | Request | Body | Result |
-| ----- | ------- | ---- | ------ |
+| Route    | Request | Body                                             | Result                                                                                                                                                    |
+| -------- | ------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /api/log | POST    | skater_id<br/>element_id</br>date_completed<br/> | returns JSON of the created element log, as well as any checkmark, ribbon, or badge logs if the requirements were met with the completion of this element |
 
 ### /api/skater-club
 

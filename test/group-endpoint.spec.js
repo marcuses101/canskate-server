@@ -10,7 +10,7 @@ const clubs = makeClubsArray();
 const sessions = makeSessionsArray();
 const groups = makeGroupArray();
 
-describe.only("group endpoints", () => {
+describe("group endpoints", () => {
   let db = {};
   function cleanup() {
     return db.raw("TRUNCATE clubs, sessions, groups RESTART IDENTITY CASCADE");
