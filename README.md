@@ -52,6 +52,7 @@
 | Route    | Request | Body                                             | Result                                                                                                                                                    |
 | -------- | ------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | /api/log | POST    | skater_id<br/>element_id</br>date_completed<br/> | returns JSON of the created element log, as well as any checkmark, ribbon, or badge logs if the requirements were met with the completion of this element |
+/api/log/:id | DELETE | | returns JSON of the deleted element checkmark ribbon and badge logs if the requirements are no longer met
 
 ### /api/skater-club
 

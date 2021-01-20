@@ -103,22 +103,6 @@ ElementLogRouter.route("/:id")
       next(error);
     }
   })
-  .get((req, res) => {
-    return res.json(req.log);
-  })
-  .patch(async (req, res, next) => {
-    try {
-      const { date_completed } = req.body;
-      if (!date_completed)
-        return res.status(400).send(`date_completed required`);
-      await ElementLogServices.updateLog(req.app.get("db"), req.log.id, {
-        date_completed,
-      });
-      return res.status(200).send(`log with id '${req.log.id} updated'`);
-    } catch (error) {
-      next(error);
-    }
-  })
   .delete(async (req, res, next) => {
     try {
       const db = req.app.get("db");
