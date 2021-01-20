@@ -5,7 +5,7 @@
 **[Live Site](https://canskate.vercel.app)**  
 **[Frontend Repo](https://github.com/marcuses101/canskate)**
 
-Used with the frontend CanSkate App, this REST API allows users better organize their [CanSkate](https://skatecanada.ca/learn-to-skate/canskate/) Program \(A program designed to teach beginner skaters the fundamentals of ice skating\). Manage clubs, sessions, groups, skaters. Keep track of skaters evaluation and progress.
+Used with the frontend CanSkate App, this REST API allows users better organize their [CanSkate](https://skatecanada.ca/learn-to-skate/canskate/) Program \(A program designed to teach beginner skaters the fundamentals of ice skating\). Manage clubs, sessions, groups, skaters. Keep track of skater evaluation and progress.
 
 ## Endpoints
 
