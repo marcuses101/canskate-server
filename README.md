@@ -44,7 +44,7 @@ Used with the frontend CanSkate App, this REST API allows users better organize 
 | Route            | Request | Body                                                                                                                                                                                           | Result                                 |
 | ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | /api/session     | POST    | day: <ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration<br/> club_id                          | returns created session JSON           |
-| /api/session     | GET     |                                                                                                                                                                                                | return session JSON with associated id |
+| /api/session/:id | GET     |                                                                                                                                                                                                | return session JSON with associated id |
 | /api/session/:id | PATCH   | **minimum one of the following:**<br/> day:<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> start_time<br/> duration | updates session with associated id     |
 | /api/session:id  | DELETE  |                                                                                                                                                                                                | deletes session with associated id     |
 
@@ -54,7 +54,7 @@ Used with the frontend CanSkate App, this REST API allows users better organize 
 
 | Route          | Request | Body                                                                                                                                         | Result                                    |
 | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| /api/group     | POST    | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul><br/> session_id | returns created group JSON                |
+| /api/group     | POST    | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul> session_id | returns created group JSON                |
 | /api/group/:id | GET     |                                                                                                                                              | returns the group JSON with associated id |
 | /api/group/:id | PATCH   | group_color: <ul><li>Red</li><li>Orange</li><li>Yellow</li><li>Green</li><li>Blue</li><li>Purple</li><li>Turquoise</li></ul>                 | updated group with associated id          |
 | /api/group/:id | DELETE  |                                                                                                                                              | deletes the group with associated id      |
@@ -97,7 +97,7 @@ Used to associate a skater to a group
 | Route | Request | Body | Result |
 | ----- | ------- | ---- | ------ |
 /api/skater-group | POST | skater_id<br/>group_id | returns JSON of the created skater-group log
-/api/skater-group | PATCH | skater_id<br/>group_id<br/>new_group_id | updates the log
+/api/skater-group | PATCH | skater_id<br/>group_id<br/>new_group_id | updates the log. skater associated with new group
 
 ## Tech
 
